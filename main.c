@@ -11,13 +11,11 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <locale.h>
 #include <limits.h>
 //
 //int	main(void)
 //{
 ////	char *l;
-////	setlocale(LC_ALL, "");
 //
 ////	l = "Hello";
 //    int i =  ft_printf("% Zoooo");
@@ -44,12 +42,14 @@ int ft_check1(const char *str, int count, va_list args, t_flag fl)
         count += ft_is_s_big(va_arg(args, wchar_t *), &fl);
 //    else if (fl.minwidth != 0)
 //        count += ft_other_chars(*str, count, fl);
+        str = "UxXpCdSscdDi%oOup"; // if not found call function other_chars
+                if(ft_strchr());
     else
         count = 0;
     return (count);
 }
 
-int ft_check2(const char *str, int count, va_list args, t_flag fl)
+int ft_check2(const char *str, int count, va_list args,t_flag fl)
 {
 	if (*str == 's' && fl.l == 1)
 		count += ft_is_s_big(va_arg(args, wchar_t *), &fl);
@@ -83,7 +83,6 @@ int ft_read(va_list args, const char *str, int count)
 		{
 			str++;
 			all_fl = ft_write_flags(str);
-//			printf("\nfl.j %d\n fl.h %d\n fl.z %d\n fl.l %d\n all_fl.hash %d\n", all_fl.j, all_fl.h, all_fl. z, all_fl.l, all_fl.hash);
 			str += all_fl.j + all_fl.h + all_fl. z + all_fl.l;
 			str += all_fl.hash + all_fl.plus + all_fl.minus + all_fl.space + all_fl.zero;
 			while ((*str >= '0' && *str <= '9') || *str == ' ' || *str == '+')

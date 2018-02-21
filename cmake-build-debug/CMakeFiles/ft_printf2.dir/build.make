@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kprasol/CLionProjects/ft_printf2
+CMAKE_SOURCE_DIR = /Users/kprasol/CLionProjects/ft_printf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/kprasol/CLionProjects/ft_printf/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ft_printf2.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ft_printf2.dir/flags.make
 
 CMakeFiles/ft_printf2.dir/main.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ft_printf2.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/main.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ft_printf2.dir/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/main.c.o   -c /Users/kprasol/CLionProjects/ft_printf/main.c
 
 CMakeFiles/ft_printf2.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/main.c > CMakeFiles/ft_printf2.dir/main.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/main.c > CMakeFiles/ft_printf2.dir/main.c.i
 
 CMakeFiles/ft_printf2.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/main.c -o CMakeFiles/ft_printf2.dir/main.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/main.c -o CMakeFiles/ft_printf2.dir/main.c.s
 
 CMakeFiles/ft_printf2.dir/main.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/ft_printf2.dir/main.c.o.provides.build: CMakeFiles/ft_printf2.dir/mai
 
 CMakeFiles/ft_printf2.dir/ft_put.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/ft_put.c.o: ../ft_put.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ft_printf2.dir/ft_put.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/ft_put.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/ft_put.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ft_printf2.dir/ft_put.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/ft_put.c.o   -c /Users/kprasol/CLionProjects/ft_printf/ft_put.c
 
 CMakeFiles/ft_printf2.dir/ft_put.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/ft_put.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/ft_put.c > CMakeFiles/ft_printf2.dir/ft_put.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/ft_put.c > CMakeFiles/ft_printf2.dir/ft_put.c.i
 
 CMakeFiles/ft_printf2.dir/ft_put.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/ft_put.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/ft_put.c -o CMakeFiles/ft_printf2.dir/ft_put.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/ft_put.c -o CMakeFiles/ft_printf2.dir/ft_put.c.s
 
 CMakeFiles/ft_printf2.dir/ft_put.c.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/ft_printf2.dir/ft_put.c.o.provides.build: CMakeFiles/ft_printf2.dir/f
 
 CMakeFiles/ft_printf2.dir/ft_is.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/ft_is.c.o: ../ft_is.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ft_printf2.dir/ft_is.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/ft_is.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/ft_is.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ft_printf2.dir/ft_is.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/ft_is.c.o   -c /Users/kprasol/CLionProjects/ft_printf/ft_is.c
 
 CMakeFiles/ft_printf2.dir/ft_is.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/ft_is.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/ft_is.c > CMakeFiles/ft_printf2.dir/ft_is.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/ft_is.c > CMakeFiles/ft_printf2.dir/ft_is.c.i
 
 CMakeFiles/ft_printf2.dir/ft_is.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/ft_is.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/ft_is.c -o CMakeFiles/ft_printf2.dir/ft_is.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/ft_is.c -o CMakeFiles/ft_printf2.dir/ft_is.c.s
 
 CMakeFiles/ft_printf2.dir/ft_is.c.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/ft_printf2.dir/ft_is.c.o.provides.build: CMakeFiles/ft_printf2.dir/ft
 
 CMakeFiles/ft_printf2.dir/ft_itoi_base.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/ft_itoi_base.c.o: ../ft_itoi_base.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ft_printf2.dir/ft_itoi_base.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/ft_itoi_base.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/ft_itoi_base.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ft_printf2.dir/ft_itoi_base.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/ft_itoi_base.c.o   -c /Users/kprasol/CLionProjects/ft_printf/ft_itoi_base.c
 
 CMakeFiles/ft_printf2.dir/ft_itoi_base.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/ft_itoi_base.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/ft_itoi_base.c > CMakeFiles/ft_printf2.dir/ft_itoi_base.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/ft_itoi_base.c > CMakeFiles/ft_printf2.dir/ft_itoi_base.c.i
 
 CMakeFiles/ft_printf2.dir/ft_itoi_base.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/ft_itoi_base.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/ft_itoi_base.c -o CMakeFiles/ft_printf2.dir/ft_itoi_base.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/ft_itoi_base.c -o CMakeFiles/ft_printf2.dir/ft_itoi_base.c.s
 
 CMakeFiles/ft_printf2.dir/ft_itoi_base.c.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/ft_printf2.dir/ft_itoi_base.c.o.provides.build: CMakeFiles/ft_printf2
 
 CMakeFiles/ft_printf2.dir/unicode.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/unicode.c.o: ../unicode.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ft_printf2.dir/unicode.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/unicode.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/unicode.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ft_printf2.dir/unicode.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/unicode.c.o   -c /Users/kprasol/CLionProjects/ft_printf/unicode.c
 
 CMakeFiles/ft_printf2.dir/unicode.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/unicode.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/unicode.c > CMakeFiles/ft_printf2.dir/unicode.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/unicode.c > CMakeFiles/ft_printf2.dir/unicode.c.i
 
 CMakeFiles/ft_printf2.dir/unicode.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/unicode.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/unicode.c -o CMakeFiles/ft_printf2.dir/unicode.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/unicode.c -o CMakeFiles/ft_printf2.dir/unicode.c.s
 
 CMakeFiles/ft_printf2.dir/unicode.c.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/ft_printf2.dir/unicode.c.o.provides.build: CMakeFiles/ft_printf2.dir/
 
 CMakeFiles/ft_printf2.dir/flags.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/flags.c.o: ../flags.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ft_printf2.dir/flags.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/flags.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/flags.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ft_printf2.dir/flags.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/flags.c.o   -c /Users/kprasol/CLionProjects/ft_printf/flags.c
 
 CMakeFiles/ft_printf2.dir/flags.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/flags.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/flags.c > CMakeFiles/ft_printf2.dir/flags.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/flags.c > CMakeFiles/ft_printf2.dir/flags.c.i
 
 CMakeFiles/ft_printf2.dir/flags.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/flags.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/flags.c -o CMakeFiles/ft_printf2.dir/flags.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/flags.c -o CMakeFiles/ft_printf2.dir/flags.c.s
 
 CMakeFiles/ft_printf2.dir/flags.c.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/ft_printf2.dir/flags.c.o.provides.build: CMakeFiles/ft_printf2.dir/fl
 
 CMakeFiles/ft_printf2.dir/ft_is_cont.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/ft_is_cont.c.o: ../ft_is_cont.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ft_printf2.dir/ft_is_cont.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/ft_is_cont.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/ft_is_cont.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ft_printf2.dir/ft_is_cont.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/ft_is_cont.c.o   -c /Users/kprasol/CLionProjects/ft_printf/ft_is_cont.c
 
 CMakeFiles/ft_printf2.dir/ft_is_cont.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/ft_is_cont.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/ft_is_cont.c > CMakeFiles/ft_printf2.dir/ft_is_cont.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/ft_is_cont.c > CMakeFiles/ft_printf2.dir/ft_is_cont.c.i
 
 CMakeFiles/ft_printf2.dir/ft_is_cont.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/ft_is_cont.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/ft_is_cont.c -o CMakeFiles/ft_printf2.dir/ft_is_cont.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/ft_is_cont.c -o CMakeFiles/ft_printf2.dir/ft_is_cont.c.s
 
 CMakeFiles/ft_printf2.dir/ft_is_cont.c.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/ft_printf2.dir/ft_is_cont.c.o.provides.build: CMakeFiles/ft_printf2.d
 
 CMakeFiles/ft_printf2.dir/width.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/width.c.o: ../width.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ft_printf2.dir/width.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/width.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/width.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ft_printf2.dir/width.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/width.c.o   -c /Users/kprasol/CLionProjects/ft_printf/width.c
 
 CMakeFiles/ft_printf2.dir/width.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/width.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/width.c > CMakeFiles/ft_printf2.dir/width.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/width.c > CMakeFiles/ft_printf2.dir/width.c.i
 
 CMakeFiles/ft_printf2.dir/width.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/width.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/width.c -o CMakeFiles/ft_printf2.dir/width.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/width.c -o CMakeFiles/ft_printf2.dir/width.c.s
 
 CMakeFiles/ft_printf2.dir/width.c.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/ft_printf2.dir/width.c.o.provides.build: CMakeFiles/ft_printf2.dir/wi
 
 CMakeFiles/ft_printf2.dir/octal.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/octal.c.o: ../octal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ft_printf2.dir/octal.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/octal.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/octal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ft_printf2.dir/octal.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/octal.c.o   -c /Users/kprasol/CLionProjects/ft_printf/octal.c
 
 CMakeFiles/ft_printf2.dir/octal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/octal.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/octal.c > CMakeFiles/ft_printf2.dir/octal.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/octal.c > CMakeFiles/ft_printf2.dir/octal.c.i
 
 CMakeFiles/ft_printf2.dir/octal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/octal.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/octal.c -o CMakeFiles/ft_printf2.dir/octal.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/octal.c -o CMakeFiles/ft_printf2.dir/octal.c.s
 
 CMakeFiles/ft_printf2.dir/octal.c.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/ft_printf2.dir/octal.c.o.provides.build: CMakeFiles/ft_printf2.dir/oc
 
 CMakeFiles/ft_printf2.dir/ft_is_num.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/ft_is_num.c.o: ../ft_is_num.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ft_printf2.dir/ft_is_num.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/ft_is_num.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/ft_is_num.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ft_printf2.dir/ft_is_num.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/ft_is_num.c.o   -c /Users/kprasol/CLionProjects/ft_printf/ft_is_num.c
 
 CMakeFiles/ft_printf2.dir/ft_is_num.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/ft_is_num.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/ft_is_num.c > CMakeFiles/ft_printf2.dir/ft_is_num.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/ft_is_num.c > CMakeFiles/ft_printf2.dir/ft_is_num.c.i
 
 CMakeFiles/ft_printf2.dir/ft_is_num.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/ft_is_num.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/ft_is_num.c -o CMakeFiles/ft_printf2.dir/ft_is_num.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/ft_is_num.c -o CMakeFiles/ft_printf2.dir/ft_is_num.c.s
 
 CMakeFiles/ft_printf2.dir/ft_is_num.c.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/ft_printf2.dir/ft_is_num.c.o.provides.build: CMakeFiles/ft_printf2.di
 
 CMakeFiles/ft_printf2.dir/ft_is_point.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/ft_is_point.c.o: ../ft_is_point.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ft_printf2.dir/ft_is_point.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/ft_is_point.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/ft_is_point.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ft_printf2.dir/ft_is_point.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/ft_is_point.c.o   -c /Users/kprasol/CLionProjects/ft_printf/ft_is_point.c
 
 CMakeFiles/ft_printf2.dir/ft_is_point.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/ft_is_point.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/ft_is_point.c > CMakeFiles/ft_printf2.dir/ft_is_point.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/ft_is_point.c > CMakeFiles/ft_printf2.dir/ft_is_point.c.i
 
 CMakeFiles/ft_printf2.dir/ft_is_point.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/ft_is_point.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/ft_is_point.c -o CMakeFiles/ft_printf2.dir/ft_is_point.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/ft_is_point.c -o CMakeFiles/ft_printf2.dir/ft_is_point.c.s
 
 CMakeFiles/ft_printf2.dir/ft_is_point.c.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/ft_printf2.dir/ft_is_point.c.o.provides.build: CMakeFiles/ft_printf2.
 
 CMakeFiles/ft_printf2.dir/hexidecimal.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/hexidecimal.c.o: ../hexidecimal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ft_printf2.dir/hexidecimal.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/hexidecimal.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/hexidecimal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ft_printf2.dir/hexidecimal.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/hexidecimal.c.o   -c /Users/kprasol/CLionProjects/ft_printf/hexidecimal.c
 
 CMakeFiles/ft_printf2.dir/hexidecimal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/hexidecimal.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/hexidecimal.c > CMakeFiles/ft_printf2.dir/hexidecimal.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/hexidecimal.c > CMakeFiles/ft_printf2.dir/hexidecimal.c.i
 
 CMakeFiles/ft_printf2.dir/hexidecimal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/hexidecimal.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/hexidecimal.c -o CMakeFiles/ft_printf2.dir/hexidecimal.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/hexidecimal.c -o CMakeFiles/ft_printf2.dir/hexidecimal.c.s
 
 CMakeFiles/ft_printf2.dir/hexidecimal.c.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/ft_printf2.dir/hexidecimal.c.o.provides.build: CMakeFiles/ft_printf2.
 
 CMakeFiles/ft_printf2.dir/other_chars.c.o: CMakeFiles/ft_printf2.dir/flags.make
 CMakeFiles/ft_printf2.dir/other_chars.c.o: ../other_chars.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ft_printf2.dir/other_chars.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/other_chars.c.o   -c /Users/kprasol/CLionProjects/ft_printf2/other_chars.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ft_printf2.dir/other_chars.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/other_chars.c.o   -c /Users/kprasol/CLionProjects/ft_printf/other_chars.c
 
 CMakeFiles/ft_printf2.dir/other_chars.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/other_chars.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf2/other_chars.c > CMakeFiles/ft_printf2.dir/other_chars.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/other_chars.c > CMakeFiles/ft_printf2.dir/other_chars.c.i
 
 CMakeFiles/ft_printf2.dir/other_chars.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/other_chars.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf2/other_chars.c -o CMakeFiles/ft_printf2.dir/other_chars.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/other_chars.c -o CMakeFiles/ft_printf2.dir/other_chars.c.s
 
 CMakeFiles/ft_printf2.dir/other_chars.c.o.requires:
 
@@ -403,7 +403,7 @@ ft_printf2: CMakeFiles/ft_printf2.dir/hexidecimal.c.o
 ft_printf2: CMakeFiles/ft_printf2.dir/other_chars.c.o
 ft_printf2: CMakeFiles/ft_printf2.dir/build.make
 ft_printf2: CMakeFiles/ft_printf2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable ft_printf2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable ft_printf2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft_printf2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -432,6 +432,6 @@ CMakeFiles/ft_printf2.dir/clean:
 .PHONY : CMakeFiles/ft_printf2.dir/clean
 
 CMakeFiles/ft_printf2.dir/depend:
-	cd /Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kprasol/CLionProjects/ft_printf2 /Users/kprasol/CLionProjects/ft_printf2 /Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug /Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug /Users/kprasol/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles/ft_printf2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/kprasol/CLionProjects/ft_printf/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kprasol/CLionProjects/ft_printf /Users/kprasol/CLionProjects/ft_printf /Users/kprasol/CLionProjects/ft_printf/cmake-build-debug /Users/kprasol/CLionProjects/ft_printf/cmake-build-debug /Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ft_printf2.dir/depend
 
