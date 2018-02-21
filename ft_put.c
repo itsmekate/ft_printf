@@ -73,11 +73,11 @@ int 	ft_strlen(char *str)
 
 int ft_putstr(char *str)
 {
-    int i;
+    size_t i;
 
-    i = ft_strlen(str);
-    write(1, &str, i);
-	return (i);
+    i = (size_t)ft_strlen(str);
+    write(1, str, i);
+	return ((int)i);
 }
 
 void    ft_putzero(int j)
