@@ -95,7 +95,13 @@ int	ft_is_s_big(wchar_t *i, t_flag *fl)
 {
 	if (i == NULL)
 	{
-		write(1, "(null)" , 6);
+		if (fl->precision != 0 && fl->precision != -1)
+		{
+			write(1, "(null)" , (size_t)fl->precision);
+			return (fl->precision);
+		}
+		else
+			write(1, "(null)" , 6);
 		return (6);
 	}
 	if (fl->minus != 1)

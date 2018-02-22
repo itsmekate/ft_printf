@@ -18,8 +18,8 @@
 ////	char *l;
 //
 ////	l = "Hello";
-//    int i =  ft_printf("{% 03d}", 0);
-//	int j = printf("{% 03d}", 0);
+//    int i =  ft_printf("%.10s", "this is test\n");
+//	int j = printf("@moulitest: %5.x %5.0x\n", 0, 0);
 //	printf("%d\n %d\n", i, j);
 //	return (0);
 //}
@@ -85,7 +85,7 @@ int ft_read(va_list args, const char *str, int count)
 			all_fl = ft_write_flags(str);
 			str += all_fl.j + all_fl.h + all_fl. z + all_fl.l;
 			str += all_fl.hash + all_fl.plus + all_fl.minus + all_fl.space + all_fl.zero;
-			while ((*str >= '0' && *str <= '9') || *str == ' ' || *str == '+')
+			while ((*str >= '0' && *str <= '9') || *str == ' ' || *str == '+' || *str == '.')
 				str++;
 			count = ft_check1(str, count, args, all_fl) + ft_check2(str, count, args, all_fl);
         }

@@ -27,6 +27,18 @@ void	ft_null_flag(t_flag *fl)
 	fl->minwidth = 0;
 	fl->precision = 0;
 }
+int    ft_write_presion(const char *tmp, t_flag *fl)
+{
+	tmp++;
+    if (!ft_atoi(tmp))
+    {
+        fl->precision = -1;
+        return (1);
+    }
+    else
+        fl->precision = ft_atoi(tmp);
+    return (ft_num_len(fl->precision));
+}
 
 t_flag	ft_write_flags(const char *str)
 {
@@ -37,7 +49,7 @@ t_flag	ft_write_flags(const char *str)
 	ft_null_flag(&fl);
 	while ((*tmp == 'h' || *tmp == 'l' ||
 				*tmp == 'j' || *tmp == 'z' || *tmp == '#'
-			|| *tmp == '+' || *tmp == '-' || *tmp == ' ' || *tmp == '0') && *tmp)
+			|| *tmp == '+' || *tmp == '-' || *tmp == ' ' || *tmp == '0' || *tmp == '.') && *tmp)
 	{
 		if (*tmp == 'h')
 		{
@@ -69,6 +81,8 @@ t_flag	ft_write_flags(const char *str)
 			fl.space = 1;
 		if (*tmp == '0')
 			fl.zero = 1;
+        if (*tmp == '.')
+            tmp += ft_write_presion(tmp, &fl);
 		tmp++;
 	}
 	if (*tmp >= '0' && *tmp <= '9')

@@ -18,11 +18,15 @@ int ft_is_s(char *str, t_flag *fl)
 
     if (str == NULL)
     {
-        write(1, "(null)" , 6);
+        if (fl->precision != 0 && fl->precision != -1)
+        {
+            write(1, "(null)" , (size_t)fl->precision);
+            return (fl->precision);
+        }
+        else
+            write(1, "(null)" , 6);
         return (6);
     }
-//	if (fl->space == 1 && fl->minwidth == 0 && fl->plus != 1)
-//		write(1, " ", 1);
 	j = fl->minwidth - ft_strlen(str);
 	if (fl->minwidth != 0 && j > 0)
 	{

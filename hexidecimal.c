@@ -37,10 +37,8 @@ int	ft_is_x_big(intmax_t i, t_flag *fl)
 {
     int     count;
     char    *res;
-    int 	k;
 
     count = 0;
-    k = 0;
     if (i == 0)
     {
         ft_putchr('0');

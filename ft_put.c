@@ -49,30 +49,30 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-//int		ft_num_len(long long n)
-//{
-//	int			count;
-//	long long	len;
-//
-//	count = 0;
-//	len = n;
-//	if (n < 0)
-//	{
-//		count++;
-//		n = -n;
-//	}
-//	if (n >= 0 && n <= 9)
-//		count++;
-//	else
-//	{
-//		while (len != 0)
-//		{
-//			len /= 10;
-//			count++;
-//		}
-//	}
-//	return (count);
-//}
+int		ft_num_len(long long n)
+{
+	int			count;
+	long long	len;
+
+	count = 0;
+	len = n;
+	if (n < 0)
+	{
+		count++;
+		n = -n;
+	}
+	if (n >= 0 && n <= 9)
+		count++;
+	else
+	{
+		while (len != 0)
+		{
+			len /= 10;
+			count++;
+		}
+	}
+	return (count);
+}
 
 int 	ft_strlen(char *str)
 {
