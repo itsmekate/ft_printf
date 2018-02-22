@@ -33,6 +33,22 @@ void	ft_putnbr(ssize_t n)
 		ft_putchr(n + 48);
 }
 
+char	*ft_strchr(const char *s, int c)
+{
+	char	a;
+	char	*b;
+
+	b = (char*)s;
+	a = (char)c;
+	while (*b || (*b == a))
+	{
+		if (*b == a)
+			return (b);
+		b++;
+	}
+	return (NULL);
+}
+
 //int		ft_num_len(long long n)
 //{
 //	int			count;

@@ -12,15 +12,15 @@
 
 #include "ft_printf.h"
 #include <limits.h>
-//
+
 //int	main(void)
 //{
 ////	char *l;
 //
 ////	l = "Hello";
-//    int i =  ft_printf("% Zoooo");
-//	int j = printf("% Zoooo");
-////	printf("%d\n %d\n", i, j);
+//    int i =  ft_printf("{%}");
+//	int j = printf("{%}");
+//	printf("%d\n %d\n", i, j);
 //	return (0);
 //}
 
@@ -40,10 +40,6 @@ int ft_check1(const char *str, int count, va_list args, t_flag fl)
         count += ft_is_d_big(va_arg(args, intmax_t), &fl);
     else if (*str == 'S')
         count += ft_is_s_big(va_arg(args, wchar_t *), &fl);
-//    else if (fl.minwidth != 0)
-//        count += ft_other_chars(*str, count, fl);
-        str = "UxXpCdSscdDi%oOup"; // if not found call function other_chars
-                if(ft_strchr());
     else
         count = 0;
     return (count);
@@ -69,6 +65,10 @@ int ft_check2(const char *str, int count, va_list args,t_flag fl)
 		count += ft_is_o_big(va_arg(args, intmax_t), &fl);
 	else if (*str == 'u')
 		count += ft_is_u(va_arg(args, uintmax_t), &fl);
+	else if(!ft_strchr("cCsSdDioOuUxXp%", *str) && fl.minwidth != 0)
+		count += ft_other_chars(*str, count, fl);
+    else if(!ft_strchr("cCsSdDioOuUxXp%", *str))
+        count += write(1, &(*str), 1);
 	else
 		count = 0;
 	return (count);
@@ -91,6 +91,7 @@ int ft_read(va_list args, const char *str, int count)
         }
 		else
 		{
+//            count += write(1, &(*str), 1);
 			ft_putchr(*str);
 			count++;
 		}
