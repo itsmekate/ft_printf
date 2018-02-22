@@ -21,8 +21,8 @@ int ft_is_s(char *str, t_flag *fl)
         write(1, "(null)" , 6);
         return (6);
     }
-	if (fl->space == 1 && fl->minwidth == 0 && fl->plus != 1)
-		write(1, " ", 1);
+//	if (fl->space == 1 && fl->minwidth == 0 && fl->plus != 1)
+//		write(1, " ", 1);
 	j = fl->minwidth - ft_strlen(str);
 	if (fl->minwidth != 0 && j > 0)
 	{
@@ -40,8 +40,8 @@ int ft_is_c(intmax_t c, t_flag *fl)
 
     if (fl->l == 1)
         c = (wint_t)c;
-	if (fl->space == 1 && fl->minwidth == 0 && fl->plus != 1 &&  c != '0')
-		write(1, " ", 1);
+//	if (fl->space == 1 && fl->minwidth == 0 && fl->plus != 1 &&  c != '0')
+//		write(1, " ", 1);
 	if (fl->minwidth != 0 && fl->minus != 1)
 	{
 		j = fl->minwidth - 1;

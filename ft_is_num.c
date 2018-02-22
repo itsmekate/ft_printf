@@ -8,11 +8,7 @@ int ft_is_d(intmax_t i, t_flag *fl)
 
 	count = 0;
 	minus = 0;
-	if (fl->space == 1 && fl->minwidth == 0 && fl->plus != 1  && i > 0 && fl->minus != 1)
-	{
-		count++;
-		write(1, " ", 1);
-	}
+
 	if (fl->h == 1)
 		i = (short)i;
 	else if (fl->h == 2)
@@ -27,6 +23,11 @@ int ft_is_d(intmax_t i, t_flag *fl)
 		i = (size_t)i;
 	else
 		i = (int)i;
+    if (fl->space == 1 && fl->minwidth == 0 && fl->plus != 1  && i > 0 && fl->minus != 1)
+    {
+        count++;
+        write(1, " ", 1);
+    }
 	if (fl->plus == 1 && i >= 0)
 	{
 		write(1, "+", 1);
@@ -59,8 +60,6 @@ int ft_is_d_big(intmax_t i, t_flag *fl)
 		count++;
 		write(1, " ", 1);
 	}
-	if (fl->h == 2)
-		i = (signed char)i;
 	else if (fl->l == 1)
 		i = (long)i;
 	else if (fl->l == 2)

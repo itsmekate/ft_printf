@@ -43,6 +43,7 @@ void			ft_putnbr(ssize_t n);
 int				ft_putstr(char *str);
 void            ft_putzero(int j);
 void            ft_putspace(int j);
+char            *ft_strchr(const char *s, int c);
 char			*ft_itoa_base_s(uintmax_t value, int base);
 char			*ft_itoa_base_S(uintmax_t value, int base);
 int				print_unicode(unsigned int i);

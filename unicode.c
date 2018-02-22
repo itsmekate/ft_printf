@@ -93,6 +93,11 @@ int	ft_is_c_big(unsigned int i, t_flag *fl)
 
 int	ft_is_s_big(wchar_t *i, t_flag *fl)
 {
+	if (i == NULL)
+	{
+		write(1, "(null)" , 6);
+		return (6);
+	}
 	if (fl->minus != 1)
 		return (ft_printbigs(i, fl));
 	else
@@ -106,8 +111,8 @@ int ft_printbigs(wchar_t *i, t_flag *fl)
 	int j = 0;
 
 	count = 0;
-	if (fl->space == 1 && fl->minwidth == 0 && fl->plus != 1 && (count++))
-		write(1, " ", 1);
+//	if (fl->space == 1 && fl->minwidth == 0 && fl->plus != 1 && (count++))
+//		write(1, " ", 1);
 	j = fl->minwidth - ft_unicodesize(i);
 	if (fl->minwidth != 0 && j > 0)
 	{

@@ -18,8 +18,8 @@
 ////	char *l;
 //
 ////	l = "Hello";
-//    int i =  ft_printf("{%}");
-//	int j = printf("{%}");
+//    int i =  ft_printf("{% 03d}", 0);
+//	int j = printf("{% 03d}", 0);
 //	printf("%d\n %d\n", i, j);
 //	return (0);
 //}

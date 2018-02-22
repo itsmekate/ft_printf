@@ -58,6 +58,8 @@ int ft_print(t_flag *fl, char *res, int count, int minus)
 	{
 		if (fl->zero == 1 && fl->minus != 1)
 		{
+            if (fl->space == 1)
+                    j -= write(1, " ", 1);
 			if (minus == 1)
 			{
 				j--;
