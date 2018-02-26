@@ -14,31 +14,24 @@
 
 int		ft_atoi(const char *str)
 {
-	int				minus;
 	unsigned long	num;
 
 	num = 0;
-	minus = 1;
+    if (*str < '0' && *str > '9')
+        return (-2);
 	while ((*str > 8 && *str < 14) || *str == 32)
 		str++;
-	if (*str == '-')
-	{
-		minus = -1;
-		str++;
-	}
-	else if (*str == '+')
+	if (*str == '+')
 		str++;
 	while (*str <= '9' && *str >= '0')
 	{
 		num *= 10;
 		num += *str - 48;
 		str++;
-		if (num > 9223372036854775807 && minus == -1)
-			return (0);
-		if (num > 9223372036854775807 && minus == 1)
+		if (num > 922337203685477580)
 			return (-1);
 	}
-	return (num * minus);
+	return (num);
 }
 
 int ft_width(const char *str)
@@ -53,7 +46,12 @@ int ft_print(t_flag *fl, char *res, int count, int minus)
 {
 	int j;
 
-	j = fl->minwidth - ft_strlen(res);
+    if ((fl->precision == 0 && ft_strcmp(res, "0") == 0))
+    {
+        j = fl->minwidth;
+    }
+	else
+        j = fl->minwidth - ft_strlen(res);
 	if (fl->minwidth != 0 && j > 0)
 	{
 		if (fl->zero == 1 && fl->minus != 1)
@@ -65,8 +63,6 @@ int ft_print(t_flag *fl, char *res, int count, int minus)
 				j--;
 				ft_putchr('-');
 			}
-			if (fl->plus == 1 && !minus)
-				j--;
 			ft_putzero(j);
 		}
 		else
@@ -75,16 +71,24 @@ int ft_print(t_flag *fl, char *res, int count, int minus)
 			ft_putspace(j);
             minus == 1 ? ft_putchr('-') : 0;
 		}
-		ft_putstr(res);
+        (fl->precision == 0 && ft_strcmp(res, "0") == 0) ? 0 : ft_putstr(res);
 		free(res);
 		return (fl->minwidth);
 	}
 	else
 	{
-        minus == 1 ? ft_putchr('-') : 0;
-		count += ft_putstr(res);
-		free(res);
-		return (count);
+        if (fl->precision == 0 && ft_strcmp(res, "0") == 0 && !minus)
+        {
+            free(res);
+            return (count);
+        }
+        else
+        {
+            minus == 1 ? ft_putchr('-') : 0;
+            count += ft_putstr(res);
+            free(res);
+            return (count);
+        }
 	}
 }
 
@@ -92,7 +96,12 @@ int ft_print_min(t_flag *fl, char *res, int count, int minus)
 {
 	int j = 0;
 
-	j = fl->minwidth - ft_strlen(res);
+    if ( (fl->precision == 0 && ft_strcmp(res, "0") == 0))
+    {
+        j = fl->minwidth;
+    }
+    else
+        j = fl->minwidth - ft_strlen(res);
 	if (minus == 1)
 	{
 		j--;

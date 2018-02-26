@@ -15,11 +15,12 @@
 
 //int	main(void)
 //{
-////	char *l;
+////setlocale(LC_ALL, "");
+//// char *l;
 //
 ////	l = "Hello";
-//    int i =  ft_printf("%.10s", "this is test\n");
-//	int j = printf("@moulitest: %5.x %5.0x\n", 0, 0);
+//  int i = ft_printf("@moulitest: %#.x %#.0x", 0, 0);
+//    int j = printf("@moulitest: %#.x %#.0x", 0, 0);
 //	printf("%d\n %d\n", i, j);
 //	return (0);
 //}
