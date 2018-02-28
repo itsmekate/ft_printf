@@ -47,9 +47,7 @@ int ft_print(t_flag *fl, char *res, int count, int minus)
 	int j;
 
     if ((fl->precision == 0 && ft_strcmp(res, "0") == 0))
-    {
         j = fl->minwidth;
-    }
 	else
         j = fl->minwidth - ft_strlen(res);
 	if (fl->minwidth != 0 && j > 0)
@@ -63,6 +61,7 @@ int ft_print(t_flag *fl, char *res, int count, int minus)
 				j--;
 				ft_putchr('-');
 			}
+            (fl->plus != 0 && !minus) ? j-- : 0;
 			ft_putzero(j);
 		}
 		else

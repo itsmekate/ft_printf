@@ -19,8 +19,8 @@
 //// char *l;
 //
 ////	l = "Hello";
-//  int i = ft_printf("@moulitest: %#.x %#.0x", 0, 0);
-//    int j = printf("@moulitest: %#.x %#.0x", 0, 0);
+//    int i =  ft_printf("%#6o", 2500);
+//    int j =  printf("%#6o", 2500);
 //	printf("%d\n %d\n", i, j);
 //	return (0);
 //}

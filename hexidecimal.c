@@ -103,8 +103,8 @@ int ft_print_hex(t_flag *fl, char *res, int count)
             write(1, "0x", 2);
             count += 2;
         }
-        (fl->precision == 0 && ft_strcmp(res, "0") == 0) ? 0 : ft_putstr(res);
-        count += ft_strlen(res);
+        (fl->precision == 0 && ft_strcmp(res, "0") == 0) ? 0 : (count += ft_putstr(res));
+//         ft_strlen(res);
         free(res);
         return (count);
     }

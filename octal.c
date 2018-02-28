@@ -7,7 +7,7 @@ int ft_is_o(intmax_t i, t_flag *fl)
     char    *res;
 
     count = 0;
-    if (i == 0)
+    if (i == 0 && fl->precision != 0)
     {
         ft_putchr('0');
         return (1);
@@ -46,7 +46,7 @@ int	ft_is_o_big(intmax_t i, t_flag *fl)
     char	*res;
 
     count = 0;
-    if (i == 0)
+    if (i == 0 && fl->precision != 0)
     {
         ft_putchr('0');
         return (1);
@@ -75,26 +75,23 @@ int ft_print_octal(t_flag *fl, char *res, int count)
 {
 	int j = 0;
 
-	j = fl->minwidth - ft_strlen(res);
-	if (fl->hash == 1)
-		j--;
+    if ((fl->precision == 0 && ft_strcmp(res, "0") == 0))
+        j = fl->minwidth;
+    else
+        j = fl->minwidth - ft_strlen(res);
+    (fl->hash == 1) ? j-- : 0 ;
 	if (fl->minwidth != 0 && j > 0)
 	{
         (fl->zero == 1 && fl->minus != 1) ? ft_putzero(j) : ft_putspace(j);
-        if (fl->hash == 1)
-            write(1, "0", 1);
-		ft_putstr(res);
+        (fl->hash == 1) ? write(1, "0", 1) : 0 ;
+        (fl->precision == 0 && ft_strcmp(res, "0") == 0) ? 0 : ft_putstr(res);
 		free(res);
 		return (fl->minwidth);
 	}
 	else
 	{
-		if (fl->hash == 1)
-		{
-			write(1, "0", 1);
-			count++;
-		}
-		count += ft_putstr(res);
+        (fl->hash == 1) ? (count += write(1, "0", 1)) : 0 ;
+        (fl->precision == 0 && ft_strcmp(res, "0") == 0  && fl->minwidth == 0) ? 0 : (count += ft_putstr(res));
 		free(res);
 		return (count);
 	}
