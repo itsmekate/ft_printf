@@ -29,7 +29,7 @@ void	ft_null_flag(t_flag *fl)
 }
 int    ft_write_precision(const char *tmp, t_flag *fl)
 {
-	tmp++;
+//	tmp++;
     fl->precision = ft_atoi(tmp);
     return (ft_num_len(fl->precision));
 }
@@ -63,7 +63,8 @@ t_flag	ft_write_flags(const char *str)
     if (*tmp == '.')
     {
         tmp++;
-        tmp += ft_write_precision(tmp, &fl);
+        if (tmp != -1)
+            tmp += ft_write_precision(tmp, &fl);
     }
     while (*tmp == 'h' || *tmp == 'l' || *tmp == 'j' || *tmp == 'z')
     {

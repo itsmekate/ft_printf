@@ -12,6 +12,7 @@
 
 #include "ft_printf.h"
 #include <limits.h>
+#include <locale.h>
 
 //int	main(void)
 //{
@@ -19,8 +20,8 @@
 //// char *l;
 //
 ////	l = "Hello";
-//    int i =  ft_printf("%#6o", 2500);
-//    int j =  printf("%#6o", 2500);
+//    int i = ft_printf("%4.15d\n", 42);
+//    int j = printf("%4.15d\n", 42);
 //	printf("%d\n %d\n", i, j);
 //	return (0);
 //}
@@ -51,7 +52,7 @@ int ft_check2(const char *str, int count, va_list args,t_flag fl)
 	if (*str == 's' && fl.l == 1)
 		count += ft_is_s_big(va_arg(args, wchar_t *), &fl);
 	else if (*str == 's')
-		count += ft_is_s(va_arg(args, char *), &fl);
+        count += ft_is_s(va_arg(args, char *), &fl);
 	else if (*str == 'c' && fl.l == 1)
 		count += ft_is_c_big(va_arg(args, unsigned int), &fl);
 	else if (*str == 'c')
@@ -96,7 +97,7 @@ int ft_read(va_list args, const char *str, int count)
 			ft_putchr(*str);
 			count++;
 		}
-        if (count != 0)
+        if ((count != 0 || all_fl.precision != 0 || all_fl.precision != -1) && ft_strcmp(str, "") != 0)
 		    str++;
 	}
 	return (count);

@@ -55,6 +55,8 @@ ft_printf.h
 /Users/kprasol/CLionProjects/ft_printf/ft_printf.h
 limits.h
 -
+locale.h
+-
 
 /Users/kprasol/CLionProjects/ft_printf/octal.c
 ft_printf.h

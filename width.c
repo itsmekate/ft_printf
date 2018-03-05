@@ -64,22 +64,43 @@ int ft_print(t_flag *fl, char *res, int count, int minus)
             (fl->plus != 0 && !minus) ? j-- : 0;
 			ft_putzero(j);
 		}
-		else
+		else if (fl->precision < fl->minwidth)
 		{
 			minus == 1 ? j-- : 0 ;
 			ft_putspace(j);
             minus == 1 ? ft_putchr('-') : 0;
 		}
-        (fl->precision == 0 && ft_strcmp(res, "0") == 0) ? 0 : ft_putstr(res);
+        if (fl->precision > ft_strlen(res))
+        {
+            fl->minwidth = fl->precision  - ft_strlen(res);
+            ft_putzero(fl->precision - ft_strlen(res));
+            ft_putstr(res);
+            free(res);
+            return (fl->precision);
+        }
+        else if (fl->precision == 0 && ft_strcmp(res, "0") == 0)
+        {
+            free(res);
+            return (fl->minwidth);
+        }
+        ft_putstr(res);
 		free(res);
 		return (fl->minwidth);
 	}
 	else
 	{
-        if (fl->precision == 0 && ft_strcmp(res, "0") == 0 && !minus)
+        if (fl->precision > ft_strlen(res))
         {
+            count += fl->precision;
+            ft_putzero(fl->precision - ft_strlen(res));
+            ft_putstr(res);
             free(res);
             return (count);
+        }
+        else if (fl->precision == 0 && ft_strcmp(res, "0") == 0)
+        {
+            free(res);
+            return (fl->minwidth);
         }
         else
         {
@@ -88,6 +109,7 @@ int ft_print(t_flag *fl, char *res, int count, int minus)
             free(res);
             return (count);
         }
+
 	}
 }
 

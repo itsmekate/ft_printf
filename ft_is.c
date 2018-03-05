@@ -15,6 +15,8 @@
 int ft_is_s(char *str, t_flag *fl)
 {
 	int j;
+    int tmp;
+    int count;
 
     if (str == NULL)
     {
@@ -27,15 +29,71 @@ int ft_is_s(char *str, t_flag *fl)
             write(1, "(null)" , 6);
         return (6);
     }
-	j = fl->minwidth - ft_strlen(str);
-	if (fl->minwidth != 0 && j > 0)
-	{
+    if (ft_strcmp(str, "") == 0 && fl->minwidth == 0)
+        return (0);
+    j = fl->minwidth - ft_strlen(str);
+	if (fl->minwidth != 0 && j > 0 && (!fl->minus))
+    {
         (fl->zero == 1) ? ft_putzero(j) : ft_putspace(j);
-		ft_putstr(str);
+        tmp = fl->precision;
+        if (tmp != 0 && tmp != -1 && ft_strcmp(str, "") != 0)
+        {
+            j = ft_strlen(str) - tmp;
+            while (j > 0)
+            {
+                j--;
+                write(1, " ", 1);
+            }
+            while (tmp-- && *str) {
+                write(1, &(*str), 1);
+                str++;
+            }
+        }
+        else if (fl->precision == 0)
+        {
+            ft_putspace(ft_strlen(str));
+            return (fl->minwidth);
+        }
+        else
+		    ft_putstr(str);
 		return (fl->minwidth);
 	}
+    else if (fl->minwidth != 0 && fl->minus) {
+
+        tmp = fl->precision;
+        if (tmp != 0 && tmp != -1 && ft_strcmp(str, "") != 0)
+        {
+            while (tmp-- && *str) {
+                write(1, &(*str), 1);
+                str++;
+            }
+            j = fl->minwidth - ft_strlen(str);
+            (fl->zero == 1) ? ft_putzero(j) : ft_putspace(j);
+        }
+        else
+        {
+            ft_putstr(str);
+            j = fl->minwidth - ft_strlen(str);
+            (fl->zero == 1) ? ft_putzero(j) : ft_putspace(j);
+        }
+        return (fl->minwidth);
+    }
 	else
-		return (ft_putstr(str));
+    {
+        count = 0;
+        tmp = fl->precision;
+        if (tmp != 0 && fl->precision != -1)
+        {
+            while (tmp-- && *str)
+            {
+                count += write(1, &(*str), 1);
+                str++;
+            }
+        }
+        else
+           count += ft_putstr(str);
+        return (count);
+    }
 }
 
 int ft_is_c(intmax_t c, t_flag *fl)
