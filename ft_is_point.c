@@ -40,6 +40,16 @@ int ft_print_point(t_flag *fl, char *res, int count)
             ft_putspace(j);
             write(1, "0x", 2);
         }
+        if (fl->precision == 0 && ft_strcmp(res, "0") == 0 && fl->minwidth <= 0)
+        {
+            free(res);
+            return (fl->minwidth);
+        }
+        if (fl->precision > ft_strlen(res))
+        {
+            fl->minwidth += fl->precision - ft_strlen(res);
+            ft_putzero(fl->precision - ft_strlen(res));
+        }
         ft_putstr(res);
         free(res);
         return (fl->minwidth);
@@ -47,6 +57,16 @@ int ft_print_point(t_flag *fl, char *res, int count)
     else
     {
         count += write(1, "0x", 2);
+        if (fl->precision == 0 && ft_strcmp(res, "0") == 0 && fl->minwidth <= 0)
+        {
+            free(res);
+            return (count);
+        }
+        if (fl->precision > ft_strlen(res))
+        {
+           count += fl->precision - ft_strlen(res);
+            ft_putzero(fl->precision - ft_strlen(res));
+        }
         count += ft_putstr(res);
         free(res);
         return (count);

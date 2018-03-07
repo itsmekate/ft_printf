@@ -14,17 +14,21 @@
 #include <limits.h>
 #include <locale.h>
 
-//int	main(void)
-//{
-////setlocale(LC_ALL, "");
-//// char *l;
+int	main(void)
+{
+//setlocale(LC_ALL, "");
+// char *l;
 //
-////	l = "Hello";
-//    int i = ft_printf("%4.15d\n", 42);
-//    int j = printf("%4.15d\n", 42);
-//	printf("%d\n %d\n", i, j);
-//	return (0);
-//}
+//	l = "Hello";
+    int i = ft_printf("%.4x", 42);
+    printf(".\n");
+    int j = printf("%.4x", 42);
+    printf(".\n");
+//    ft_printf("%-5.10o\n", 2500);
+//    printf("%-5.10o\n", 2500);
+	printf("%d\n %d\n", i, j);
+	return (0);
+}
 
 int ft_check1(const char *str, int count, va_list args, t_flag fl)
 {

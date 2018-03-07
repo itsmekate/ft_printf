@@ -12,11 +12,6 @@ int ft_is_o(intmax_t i, t_flag *fl)
         ft_putchr('0');
         return (1);
     }
-    if (fl->space == 1 && fl->minwidth == 0 && fl->plus != 1)
-    {
-        count++;
-        write(1, " ", 1);
-    }
     // make additional function casting
     if (fl->h == 1)
         i = (unsigned short)i;
@@ -77,20 +72,29 @@ int ft_print_octal(t_flag *fl, char *res, int count)
 
     if ((fl->precision == 0 && ft_strcmp(res, "0") == 0))
         j = fl->minwidth;
+    else if (fl->precision > ft_strlen(res))
+        j = fl->minwidth - fl->precision;
     else
         j = fl->minwidth - ft_strlen(res);
-    (fl->hash == 1) ? j-- : 0 ;
+    (fl->hash == 1 && fl->precision != 0) ? j-- : 0 ;
 	if (fl->minwidth != 0 && j > 0)
 	{
         (fl->zero == 1 && fl->minus != 1) ? ft_putzero(j) : ft_putspace(j);
-        (fl->hash == 1) ? write(1, "0", 1) : 0 ;
-        if (fl->precision > ft_strlen(res) && ft_strcmp(res, "0") == 0)
+        (fl->hash == 1 && fl->precision != 0) ? write(1, "0", 1) : 0 ;
+        if (fl->precision > ft_strlen(res) && ft_strcmp(res, "0") != 0)
         {
             fl->minwidth += fl->precision - ft_strlen(res) - 1;
             ft_putzero(fl->precision - ft_strlen(res));
             ft_putstr(res);
+            free(res);
+            return (fl->minwidth - 1);
         }
-        (fl->precision == 0 && ft_strcmp(res, "0") == 0) ? 0 : ft_putstr(res);
+        if (fl->precision > ft_strlen(res) && ft_strcmp(res, "0") == 0)
+        {
+            free(res);
+            return (fl->minwidth);
+        }
+        (fl->precision <= 0 && ft_strcmp(res, "0") == 0) ? 0 : ft_putstr(res);
 		free(res);
 		return (fl->minwidth);
 	}
@@ -102,12 +106,19 @@ int ft_print_octal(t_flag *fl, char *res, int count)
             free(res);
             return (count);
         }
-        (fl->hash == 1) ? write(1, "0", 1) : 0 ;
+        (fl->hash == 1 && fl->precision > 0) ? write(1, "0", 1) : 0 ;
         if (fl->precision > ft_strlen(res) && ft_strcmp(res, "0") != 0)
         {
-            count += fl->precision - ft_strlen(res);
+            fl->minwidth += fl->precision - ft_strlen(res) - 1;
             ft_putzero(fl->precision - ft_strlen(res));
-            count += ft_putstr(res);
+            ft_putstr(res);
+            free(res);
+            return (fl->minwidth - 1);
+        }
+        if (fl->precision > ft_strlen(res) && ft_strcmp(res, "0") == 0)
+        {
+            free(res);
+            return (fl->minwidth);
         }
         else
             count += ft_putstr(res);
@@ -134,7 +145,7 @@ int ft_print_octalmin(t_flag *fl, char *res, int count)
             ft_putzero(fl->precision - ft_strlen(res));
             ft_putstr(res);
             j = fl->minwidth - ft_strlen(res) - 1;
-            if (fl->minus != 1)
+            if (fl->minus != 1 || (fl->minwidth - fl->precision) > 0)
                 (fl->zero == 1) ? ft_putzero(j) : ft_putspace(j);
         }
         else
