@@ -69,7 +69,7 @@ int				ft_printbigs(wchar_t *i, t_flag *fl);
 int				ft_printbigs_min(wchar_t *i, t_flag *fl);
 int				ft_print(t_flag *fl, char *res, int count, int minus);
 int				ft_print_min(t_flag *fl, char *res, int count, int minus);
-int				ft_print_hex(t_flag *fl, char *res, int count);
+int 			ft_print_hex(t_flag *fl, char *res, int count, int big);
 int 			ft_print_hexmin(t_flag *fl, char *res, int count);
 int				ft_print_point(t_flag *fl, char *res, int count);
 int				ft_print_octal(t_flag *fl, char *res, int count);

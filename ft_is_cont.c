@@ -33,6 +33,7 @@ int	ft_is_u(intmax_t i, t_flag *fl)
 	else
 		i = (unsigned int)i;
 	res = ft_itoa_base_s(i, 10);
+	fl->plus = 0;
 	if (fl->minus == 1)
 		count += ft_print_min(fl, res, count, 0);
 	else
@@ -56,6 +57,7 @@ int ft_is_u_big(intmax_t i, t_flag *fl)
 		i = (size_t)i;
 	else
 		i = (unsigned long)i;
+	fl->plus = 0;
 	res = ft_itoa_base_S(i, 10);
 	if (fl->minus == 1)
 		count += ft_print_min(fl, res, count, 0);

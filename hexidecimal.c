@@ -2,109 +2,141 @@
 
 int ft_is_x(intmax_t i, t_flag *fl)
 {
-    int     count;
-    char    *res;
+	int     count;
+	char    *res;
 
-    count = 0;
-    if (i == 0 && fl->precision != 0)
-    {
-        ft_putchr('0');
-        return (1);
-    }
-    if (fl->h == 1)
-        i = (unsigned short)i;
-    else if (fl->h == 2)
-        i = (unsigned char)i;
-    else if (fl->l == 1)
-        i = (unsigned long)i;
-    else if (fl->l == 2)
-        i = (unsigned long long)i;
-    else if (fl->j == 1)
-        i = (uintmax_t)i;
-    else if (fl->z == 1)
-        i = (size_t)i;
-    else
-        i = (unsigned int)i;
-    res = ft_itoa_base_s(i, 16);
-    if (fl->minus == 1)
-        count = ft_print_hexmin(fl, res, count);
-    else
-        count = ft_print_hex(fl, res, count);
-    return (count);
+	count = 0;
+	if (i == 0 && fl->precision != 0)
+	{
+		ft_putchr('0');
+		return (1);
+	}
+	if (fl->h == 1)
+		i = (unsigned short)i;
+	else if (fl->h == 2)
+		i = (unsigned char)i;
+	else if (fl->l == 1)
+		i = (unsigned long)i;
+	else if (fl->l == 2)
+		i = (unsigned long long)i;
+	else if (fl->j == 1)
+		i = (uintmax_t)i;
+	else if (fl->z == 1)
+		i = (size_t)i;
+	else
+		i = (unsigned int)i;
+	res = ft_itoa_base_s(i, 16);
+	if (fl->minus == 1)
+		count = ft_print_hexmin(fl, res, count);
+	else
+		count = ft_print_hex(fl, res, count, 0);
+	return (count);
 }
 
 int	ft_is_x_big(intmax_t i, t_flag *fl)
 {
-    int     count;
-    char    *res;
+	int     count;
+	char    *res;
 
-    count = 0;
-    if (i == 0 && fl->precision != 0)
-    {
-        ft_putchr('0');
-        return (1);
-    }
-    if (fl->h == 1)
-        i = (unsigned short)i;
-    else if (fl->h == 2)
-        i = (unsigned char)i;
-    else if (fl->l == 1)
-        i = (unsigned long)i;
-    else if (fl->l == 2)
-        i = (unsigned long long)i;
-    else if (fl->j== 1)
-        i = (uintmax_t)i;
-    else if (fl->z == 1)
-        i = (size_t)i;
-    else
-        i = (unsigned int)i;
-    res = ft_itoa_base_S(i, 16);
-    if (fl->hash == 1 && (count += 2))
-        write(1, "0X", 2);
-    if (fl->minus == 1)
-        count = ft_print_min(fl, res, count, 0);
-    else
-        count = ft_print(fl, res, count, 0);
-    return (count);
+	count = 0;
+	if (i == 0 && fl->precision != 0)
+	{
+		ft_putchr('0');
+		return (1);
+	}
+	if (fl->h == 1)
+		i = (unsigned short)i;
+	else if (fl->h == 2)
+		i = (unsigned char)i;
+	else if (fl->l == 1)
+		i = (unsigned long)i;
+	else if (fl->l == 2)
+		i = (unsigned long long)i;
+	else if (fl->j== 1)
+		i = (uintmax_t)i;
+	else if (fl->z == 1)
+		i = (size_t)i;
+	else
+		i = (unsigned int)i;
+	res = ft_itoa_base_S(i, 16);
+//	if (fl->hash == 1 && (count += 2))
+//		write(1, "0X", 2);
+	if (fl->minus == 1)
+		count = ft_print_hexmin(fl, res, count);
+	else
+		count = ft_print_hex(fl, res, count, 1);
+	return (count);
 }
 //needs shortening
-int ft_print_hex(t_flag *fl, char *res, int count)
+int ft_print_hex(t_flag *fl, char *res, int count, int big)
 {
-    int j;
+
+    int j = 0;
 
     if ((fl->precision == 0 && ft_strcmp(res, "0") == 0))
-    {
         j = fl->minwidth;
-    }
+    else if (fl->precision > ft_strlen(res))
+        j = fl->minwidth - fl->precision;
     else
         j = fl->minwidth - ft_strlen(res);
-    (fl->hash == 1 && ft_strcmp(res, "0") != 0) ? j -= 2 : 0 ;
+    (fl->hash == 1 && fl->precision != 0) ? j-= 2 : 0 ;
     if (fl->minwidth != 0 && j > 0)
     {
         if (fl->zero == 1 && fl->minus != 1)
         {
-            (fl->hash == 1 && ft_strcmp(res, "0") != 0) ? write(1, "0x", 2) : 0 ;
+            (fl->hash == 1 && big && fl->precision != 0) ? write(1, "0X", 2) : 0 ;
+            (fl->hash == 1 && !big && fl->precision != 0) ? write(1, "0x", 2) : 0 ;
             ft_putzero(j);
         }
         else
         {
             ft_putspace(j);
-            (fl->hash == 1  && ft_strcmp(res, "0") != 0) ? write(1, "0x", 2) : 0 ;
+            (fl->hash == 1 && big && fl->precision != 0) ? write(1, "0X", 2) : 0 ;
+            (fl->hash == 1 && !big && fl->precision != 0) ? write(1, "0x", 2) : 0 ;
         }
-        (fl->precision == 0 && ft_strcmp(res, "0") == 0) ? 0 : ft_putstr(res);
-//        ft_putstr(res);
+        if (fl->precision > ft_strlen(res) && ft_strcmp(res, "0") != 0)
+        {
+            fl->minwidth += fl->precision - ft_strlen(res) - 1;
+            ft_putzero(fl->precision - ft_strlen(res));
+            ft_putstr(res);
+            free(res);
+            return (fl->minwidth - 1);
+        }
+        if (fl->precision > ft_strlen(res) && ft_strcmp(res, "0") == 0)
+        {
+            free(res);
+            return (fl->minwidth);
+        }
+        (fl->hash == 1 && big && fl->precision != 0 && fl->precision > 0) ? write(1, "0X", 2) : 0 ;
+        (fl->hash == 1 && !big && fl->precision != 0 && fl->precision > 0) ? write(1, "0x", 2) : 0 ;
+        (fl->precision <= 0 && ft_strcmp(res, "0") == 0) ? 0 : ft_putstr(res);
         free(res);
         return (fl->minwidth);
     }
     else
     {
-        if (fl->hash == 1 && ft_strcmp(res, "0") != 0)
+        (fl->hash == 1 && big && ft_strcmp(res, "0") != 0) ? (count += write(1, "0X", 2)) : 0;
+        (fl->hash == 1 && !big && ft_strcmp(res, "0") != 0) ? (count += write(1, "0x", 2)) : 0;
+        if (fl->precision == 0 && ft_strcmp(res, "0") == 0)
         {
-            write(1, "0x", 2);
-            count += 2;
+            free(res);
+            return (count);
         }
-        (fl->precision == 0 && ft_strcmp(res, "0") == 0) ? 0 : (count += ft_putstr(res));
-//         ft_strlen(res);
+        if (fl->precision > ft_strlen(res) && ft_strcmp(res, "0") != 0)
+        {
+            count += fl->precision - ft_strlen(res);
+            ft_putzero(fl->precision - ft_strlen(res));
+            count += ft_putstr(res);
+            free(res);
+            return (count);
+        }
+        if (fl->precision > ft_strlen(res) && ft_strcmp(res, "0") == 0)
+        {
+            free(res);
+            return (fl->minwidth);
+        }
+        else
+            count += ft_putstr(res);
         free(res);
         return (count);
     }
@@ -114,25 +146,33 @@ int ft_print_hexmin(t_flag *fl, char *res, int count)
 {
     int j = 0;
 
-    j = fl->minwidth - ft_strlen(res);
-    if (fl->hash == 1)
-        j -= 2;
+    if (fl->precision > ft_strlen(res))
+        j = fl->minwidth;
+    else
+        j = fl->minwidth - ft_strlen(res);
+    if (fl->hash == 1 && (j-= 2))
+        write(1, "0x", 2);
     if (fl->minwidth != 0 && j > 0)
     {
-        if (fl->hash == 1)
-            write(1, "0x", 2);
-        ft_putstr(res);
-        (fl->zero == 1 && fl->minus != 1) ? ft_putzero(j) : ft_putspace(j);
+        if (fl->precision > ft_strlen(res))
+        {
+            fl->minwidth += fl->precision - ft_strlen(res) - 1;
+            ft_putzero(fl->precision - ft_strlen(res));
+            ft_putstr(res);
+            j = fl->minwidth - ft_strlen(res) - 1;
+            if (fl->minus != 1 || (fl->minwidth - fl->precision) > 0)
+                (fl->zero == 1) ? ft_putzero(j) : ft_putspace(j);
+        }
+        else
+        {
+            ft_putstr(res);
+            (fl->zero == 1 && fl->minus != 1) ? ft_putzero(j) : ft_putspace(j);
+        }
         free(res);
         return (fl->minwidth);
     }
     else
     {
-        if (fl->hash == 1)
-        {
-            write(1, "0x", 2);
-            count += 2;
-        }
         count += ft_putstr(res);
         free(res);
         return (count);

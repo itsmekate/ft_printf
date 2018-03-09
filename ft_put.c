@@ -89,21 +89,21 @@ int 	ft_strlen(char *str)
 
 int ft_putstr(char *str)
 {
-    size_t i;
+	size_t i;
 
-    i = (size_t)ft_strlen(str);
-    write(1, str, i);
+	i = (size_t)ft_strlen(str);
+	write(1, str, i);
 	return ((int)i);
 }
 
 void    ft_putzero(int j)
 {
-    while (j--)
-        ft_putchr('0');
+	while (j--)
+		ft_putchr('0');
 }
 
 void    ft_putspace(int j)
 {
-    while (j--)
-        ft_putchr(' ');
+	while (j--)
+		ft_putchr(' ');
 }

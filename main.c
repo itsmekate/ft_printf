@@ -14,41 +14,41 @@
 #include <limits.h>
 #include <locale.h>
 
-int	main(void)
-{
-//setlocale(LC_ALL, "");
-// char *l;
-//
-//	l = "Hello";
-    int i = ft_printf("%.4x", 42);
-    printf(".\n");
-    int j = printf("%.4x", 42);
-    printf(".\n");
-//    ft_printf("%-5.10o\n", 2500);
-//    printf("%-5.10o\n", 2500);
-	printf("%d\n %d\n", i, j);
-	return (0);
-}
+//int	main(void)
+//{
+////setlocale(LC_ALL, "");
+//// char *l;
+////
+////	l = "Hello";
+//    int i = ft_printf("{%03.2d}\n", 0);
+//    int j = printf("{%03.2d}\n", 0);
+//        printf("original {%+03d}\n", 0);
+//        ft_printf("{%+03d}\n", 0);
+//        printf("original {% 03d}\n", 0);
+//        ft_printf("{% 03d}\n", 0);
+//	printf("%d\n %d\n", i, j);
+//	return (0);
+//}
 
 int ft_check1(const char *str, int count, va_list args, t_flag fl)
 {
-    if (*str == 'U')
-        count += ft_is_u_big(va_arg(args, uintmax_t), &fl);
-    else if (*str == 'x')
-        count += ft_is_x(va_arg(args, uintmax_t), &fl);
-    else if (*str == 'X')
-        count += ft_is_x_big(va_arg(args, intmax_t), &fl);
-    else if (*str == 'p')
-        count += ft_is_p(va_arg(args, intmax_t), &fl);
-    else if (*str == 'C')
-        count += ft_is_c_big(va_arg(args, unsigned int), &fl);
-    else if (*str == 'D')
-        count += ft_is_d_big(va_arg(args, intmax_t), &fl);
-    else if (*str == 'S')
-        count += ft_is_s_big(va_arg(args, wchar_t *), &fl);
-    else
-        count = 0;
-    return (count);
+	if (*str == 'U')
+		count += ft_is_u_big(va_arg(args, uintmax_t), &fl);
+	else if (*str == 'x')
+		count += ft_is_x(va_arg(args, uintmax_t), &fl);
+	else if (*str == 'X')
+		count += ft_is_x_big(va_arg(args, intmax_t), &fl);
+	else if (*str == 'p')
+		count += ft_is_p(va_arg(args, intmax_t), &fl);
+	else if (*str == 'C')
+		count += ft_is_c_big(va_arg(args, unsigned int), &fl);
+	else if (*str == 'D')
+		count += ft_is_d_big(va_arg(args, intmax_t), &fl);
+	else if (*str == 'S')
+		count += ft_is_s_big(va_arg(args, wchar_t *), &fl);
+	else
+		count = 0;
+	return (count);
 }
 
 int ft_check2(const char *str, int count, va_list args,t_flag fl)
@@ -56,7 +56,7 @@ int ft_check2(const char *str, int count, va_list args,t_flag fl)
 	if (*str == 's' && fl.l == 1)
 		count += ft_is_s_big(va_arg(args, wchar_t *), &fl);
 	else if (*str == 's')
-        count += ft_is_s(va_arg(args, char *), &fl);
+		count += ft_is_s(va_arg(args, char *), &fl);
 	else if (*str == 'c' && fl.l == 1)
 		count += ft_is_c_big(va_arg(args, unsigned int), &fl);
 	else if (*str == 'c')
@@ -73,8 +73,8 @@ int ft_check2(const char *str, int count, va_list args,t_flag fl)
 		count += ft_is_u(va_arg(args, uintmax_t), &fl);
 	else if(!ft_strchr("cCsSdDioOuUxXp%", *str) && fl.minwidth != 0)
 		count += ft_other_chars(*str, count, fl);
-    else if(!ft_strchr("cCsSdDioOuUxXp%", *str))
-        count += write(1, &(*str), 1);
+	else if(!ft_strchr("cCsSdDioOuUxXp%", *str))
+		count += write(1, &(*str), 1);
 	else
 		count = 0;
 	return (count);
@@ -94,15 +94,14 @@ int ft_read(va_list args, const char *str, int count)
 			while ((*str >= '0' && *str <= '9') || *str == ' ' || *str == '+' || *str == '.')
 				str++;
 			count = ft_check1(str, count, args, all_fl) + ft_check2(str, count, args, all_fl);
-        }
+		}
 		else
 		{
-//            count += write(1, &(*str), 1);
 			ft_putchr(*str);
 			count++;
 		}
-        if ((count != 0 || all_fl.precision != 0 || all_fl.precision != -1) && ft_strcmp(str, "") != 0)
-		    str++;
+		if ((count != 0 || all_fl.precision != 0 || all_fl.precision != -1) && ft_strcmp(str, "") != 0)
+			str++;
 	}
 	return (count);
 }

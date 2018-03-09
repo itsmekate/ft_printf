@@ -122,7 +122,7 @@ int ft_printbigs(wchar_t *i, t_flag *fl)
 	j = fl->minwidth - ft_unicodesize(i);
 	if (fl->minwidth != 0 && j > 0)
 	{
-        fl->zero == 1 ? ft_putzero(j) : ft_putspace(j);
+		fl->zero == 1 ? ft_putzero(j) : ft_putspace(j);
 		ft_putuni(i, count);
 		return (fl->minwidth);
 	}
@@ -142,7 +142,7 @@ int ft_printbigs_min(wchar_t *i, t_flag *fl)
 	if (fl->minwidth != 0 && j > 0)
 	{
 		ft_putuni(i, count);
-        fl->zero == 1 ? ft_putzero(j) : ft_putspace(j);
+		fl->zero == 1 ? ft_putzero(j) : ft_putspace(j);
 		return (fl->minwidth);
 	}
 	else
