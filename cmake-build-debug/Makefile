@@ -366,6 +366,33 @@ hexidecimal_print.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/hexidecimal_print.c.s
 .PHONY : hexidecimal_print.c.s
 
+hexidecimal_print_min.o: hexidecimal_print_min.c.o
+
+.PHONY : hexidecimal_print_min.o
+
+# target to build an object file
+hexidecimal_print_min.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/hexidecimal_print_min.c.o
+.PHONY : hexidecimal_print_min.c.o
+
+hexidecimal_print_min.i: hexidecimal_print_min.c.i
+
+.PHONY : hexidecimal_print_min.i
+
+# target to preprocess a source file
+hexidecimal_print_min.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/hexidecimal_print_min.c.i
+.PHONY : hexidecimal_print_min.c.i
+
+hexidecimal_print_min.s: hexidecimal_print_min.c.s
+
+.PHONY : hexidecimal_print_min.s
+
+# target to generate assembly for a file
+hexidecimal_print_min.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/hexidecimal_print_min.c.s
+.PHONY : hexidecimal_print_min.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -672,6 +699,9 @@ help:
 	@echo "... hexidecimal_print.o"
 	@echo "... hexidecimal_print.i"
 	@echo "... hexidecimal_print.s"
+	@echo "... hexidecimal_print_min.o"
+	@echo "... hexidecimal_print_min.i"
+	@echo "... hexidecimal_print_min.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
