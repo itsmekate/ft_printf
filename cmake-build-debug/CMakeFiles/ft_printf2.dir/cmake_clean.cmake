@@ -17,6 +17,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf2.dir/unicode_print.c.o"
   "CMakeFiles/ft_printf2.dir/more_unicode.c.o"
   "CMakeFiles/ft_printf2.dir/print_octal.c.o"
+  "CMakeFiles/ft_printf2.dir/print.c.o"
   "ft_printf2.pdb"
   "ft_printf2"
 )

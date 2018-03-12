@@ -474,6 +474,33 @@ other_chars.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/other_chars.c.s
 .PHONY : other_chars.c.s
 
+print.o: print.c.o
+
+.PHONY : print.o
+
+# target to build an object file
+print.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/print.c.o
+.PHONY : print.c.o
+
+print.i: print.c.i
+
+.PHONY : print.i
+
+# target to preprocess a source file
+print.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/print.c.i
+.PHONY : print.c.i
+
+print.s: print.c.s
+
+.PHONY : print.s
+
+# target to generate assembly for a file
+print.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/print.c.s
+.PHONY : print.c.s
+
 print_octal.o: print_octal.c.o
 
 .PHONY : print_octal.o
@@ -657,6 +684,9 @@ help:
 	@echo "... other_chars.o"
 	@echo "... other_chars.i"
 	@echo "... other_chars.s"
+	@echo "... print.o"
+	@echo "... print.i"
+	@echo "... print.s"
 	@echo "... print_octal.o"
 	@echo "... print_octal.i"
 	@echo "... print_octal.s"

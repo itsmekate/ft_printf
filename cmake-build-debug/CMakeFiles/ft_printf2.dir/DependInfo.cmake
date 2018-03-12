@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/kprasol/CLionProjects/ft_printf/more_unicode.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/more_unicode.c.o"
   "/Users/kprasol/CLionProjects/ft_printf/octal.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/octal.c.o"
   "/Users/kprasol/CLionProjects/ft_printf/other_chars.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/other_chars.c.o"
+  "/Users/kprasol/CLionProjects/ft_printf/print.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/print.c.o"
   "/Users/kprasol/CLionProjects/ft_printf/print_octal.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/print_octal.c.o"
   "/Users/kprasol/CLionProjects/ft_printf/string.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/string.c.o"
   "/Users/kprasol/CLionProjects/ft_printf/unicode.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/unicode.c.o"

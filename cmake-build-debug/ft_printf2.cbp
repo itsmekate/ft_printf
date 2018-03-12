@@ -122,6 +122,9 @@
 		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/other_chars.c">
 			<Option target="ft_printf2"/>
 		</Unit>
+		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/print.c">
+			<Option target="ft_printf2"/>
+		</Unit>
 		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/print_octal.c">
 			<Option target="ft_printf2"/>
 		</Unit>
