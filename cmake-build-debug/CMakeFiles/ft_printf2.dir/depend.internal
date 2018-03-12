@@ -25,18 +25,33 @@ CMakeFiles/ft_printf2.dir/ft_put.c.o
 CMakeFiles/ft_printf2.dir/hexidecimal.c.o
  /Users/kprasol/CLionProjects/ft_printf/ft_printf.h
  /Users/kprasol/CLionProjects/ft_printf/hexidecimal.c
+CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o
+ /Users/kprasol/CLionProjects/ft_printf/ft_printf.h
+ /Users/kprasol/CLionProjects/ft_printf/hexidecimal_print.c
 CMakeFiles/ft_printf2.dir/main.c.o
  /Users/kprasol/CLionProjects/ft_printf/ft_printf.h
  /Users/kprasol/CLionProjects/ft_printf/main.c
+CMakeFiles/ft_printf2.dir/more_unicode.c.o
+ /Users/kprasol/CLionProjects/ft_printf/ft_printf.h
+ /Users/kprasol/CLionProjects/ft_printf/more_unicode.c
 CMakeFiles/ft_printf2.dir/octal.c.o
  /Users/kprasol/CLionProjects/ft_printf/ft_printf.h
  /Users/kprasol/CLionProjects/ft_printf/octal.c
 CMakeFiles/ft_printf2.dir/other_chars.c.o
  /Users/kprasol/CLionProjects/ft_printf/ft_printf.h
  /Users/kprasol/CLionProjects/ft_printf/other_chars.c
+CMakeFiles/ft_printf2.dir/print_octal.c.o
+ /Users/kprasol/CLionProjects/ft_printf/ft_printf.h
+ /Users/kprasol/CLionProjects/ft_printf/print_octal.c
+CMakeFiles/ft_printf2.dir/string.c.o
+ /Users/kprasol/CLionProjects/ft_printf/ft_printf.h
+ /Users/kprasol/CLionProjects/ft_printf/string.c
 CMakeFiles/ft_printf2.dir/unicode.c.o
  /Users/kprasol/CLionProjects/ft_printf/ft_printf.h
  /Users/kprasol/CLionProjects/ft_printf/unicode.c
+CMakeFiles/ft_printf2.dir/unicode_print.c.o
+ /Users/kprasol/CLionProjects/ft_printf/ft_printf.h
+ /Users/kprasol/CLionProjects/ft_printf/unicode_print.c
 CMakeFiles/ft_printf2.dir/width.c.o
  /Users/kprasol/CLionProjects/ft_printf/ft_printf.h
  /Users/kprasol/CLionProjects/ft_printf/width.c

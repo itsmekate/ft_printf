@@ -12,6 +12,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf2.dir/ft_is_point.c.o"
   "CMakeFiles/ft_printf2.dir/hexidecimal.c.o"
   "CMakeFiles/ft_printf2.dir/other_chars.c.o"
+  "CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o"
+  "CMakeFiles/ft_printf2.dir/string.c.o"
+  "CMakeFiles/ft_printf2.dir/unicode_print.c.o"
+  "CMakeFiles/ft_printf2.dir/more_unicode.c.o"
+  "CMakeFiles/ft_printf2.dir/print_octal.c.o"
   "ft_printf2.pdb"
   "ft_printf2"
 )

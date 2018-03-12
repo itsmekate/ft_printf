@@ -369,6 +369,126 @@ CMakeFiles/ft_printf2.dir/other_chars.c.o.provides: CMakeFiles/ft_printf2.dir/ot
 CMakeFiles/ft_printf2.dir/other_chars.c.o.provides.build: CMakeFiles/ft_printf2.dir/other_chars.c.o
 
 
+CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o: CMakeFiles/ft_printf2.dir/flags.make
+CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o: ../hexidecimal_print.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o   -c /Users/kprasol/CLionProjects/ft_printf/hexidecimal_print.c
+
+CMakeFiles/ft_printf2.dir/hexidecimal_print.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/hexidecimal_print.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/hexidecimal_print.c > CMakeFiles/ft_printf2.dir/hexidecimal_print.c.i
+
+CMakeFiles/ft_printf2.dir/hexidecimal_print.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/hexidecimal_print.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/hexidecimal_print.c -o CMakeFiles/ft_printf2.dir/hexidecimal_print.c.s
+
+CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o.requires:
+
+.PHONY : CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o.requires
+
+CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o.provides: CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o.provides
+
+CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o.provides.build: CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o
+
+
+CMakeFiles/ft_printf2.dir/string.c.o: CMakeFiles/ft_printf2.dir/flags.make
+CMakeFiles/ft_printf2.dir/string.c.o: ../string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ft_printf2.dir/string.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/string.c.o   -c /Users/kprasol/CLionProjects/ft_printf/string.c
+
+CMakeFiles/ft_printf2.dir/string.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/string.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/string.c > CMakeFiles/ft_printf2.dir/string.c.i
+
+CMakeFiles/ft_printf2.dir/string.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/string.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/string.c -o CMakeFiles/ft_printf2.dir/string.c.s
+
+CMakeFiles/ft_printf2.dir/string.c.o.requires:
+
+.PHONY : CMakeFiles/ft_printf2.dir/string.c.o.requires
+
+CMakeFiles/ft_printf2.dir/string.c.o.provides: CMakeFiles/ft_printf2.dir/string.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/string.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf2.dir/string.c.o.provides
+
+CMakeFiles/ft_printf2.dir/string.c.o.provides.build: CMakeFiles/ft_printf2.dir/string.c.o
+
+
+CMakeFiles/ft_printf2.dir/unicode_print.c.o: CMakeFiles/ft_printf2.dir/flags.make
+CMakeFiles/ft_printf2.dir/unicode_print.c.o: ../unicode_print.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/ft_printf2.dir/unicode_print.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/unicode_print.c.o   -c /Users/kprasol/CLionProjects/ft_printf/unicode_print.c
+
+CMakeFiles/ft_printf2.dir/unicode_print.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/unicode_print.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/unicode_print.c > CMakeFiles/ft_printf2.dir/unicode_print.c.i
+
+CMakeFiles/ft_printf2.dir/unicode_print.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/unicode_print.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/unicode_print.c -o CMakeFiles/ft_printf2.dir/unicode_print.c.s
+
+CMakeFiles/ft_printf2.dir/unicode_print.c.o.requires:
+
+.PHONY : CMakeFiles/ft_printf2.dir/unicode_print.c.o.requires
+
+CMakeFiles/ft_printf2.dir/unicode_print.c.o.provides: CMakeFiles/ft_printf2.dir/unicode_print.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/unicode_print.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf2.dir/unicode_print.c.o.provides
+
+CMakeFiles/ft_printf2.dir/unicode_print.c.o.provides.build: CMakeFiles/ft_printf2.dir/unicode_print.c.o
+
+
+CMakeFiles/ft_printf2.dir/more_unicode.c.o: CMakeFiles/ft_printf2.dir/flags.make
+CMakeFiles/ft_printf2.dir/more_unicode.c.o: ../more_unicode.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ft_printf2.dir/more_unicode.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/more_unicode.c.o   -c /Users/kprasol/CLionProjects/ft_printf/more_unicode.c
+
+CMakeFiles/ft_printf2.dir/more_unicode.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/more_unicode.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/more_unicode.c > CMakeFiles/ft_printf2.dir/more_unicode.c.i
+
+CMakeFiles/ft_printf2.dir/more_unicode.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/more_unicode.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/more_unicode.c -o CMakeFiles/ft_printf2.dir/more_unicode.c.s
+
+CMakeFiles/ft_printf2.dir/more_unicode.c.o.requires:
+
+.PHONY : CMakeFiles/ft_printf2.dir/more_unicode.c.o.requires
+
+CMakeFiles/ft_printf2.dir/more_unicode.c.o.provides: CMakeFiles/ft_printf2.dir/more_unicode.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/more_unicode.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf2.dir/more_unicode.c.o.provides
+
+CMakeFiles/ft_printf2.dir/more_unicode.c.o.provides.build: CMakeFiles/ft_printf2.dir/more_unicode.c.o
+
+
+CMakeFiles/ft_printf2.dir/print_octal.c.o: CMakeFiles/ft_printf2.dir/flags.make
+CMakeFiles/ft_printf2.dir/print_octal.c.o: ../print_octal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ft_printf2.dir/print_octal.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf2.dir/print_octal.c.o   -c /Users/kprasol/CLionProjects/ft_printf/print_octal.c
+
+CMakeFiles/ft_printf2.dir/print_octal.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf2.dir/print_octal.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kprasol/CLionProjects/ft_printf/print_octal.c > CMakeFiles/ft_printf2.dir/print_octal.c.i
+
+CMakeFiles/ft_printf2.dir/print_octal.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf2.dir/print_octal.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kprasol/CLionProjects/ft_printf/print_octal.c -o CMakeFiles/ft_printf2.dir/print_octal.c.s
+
+CMakeFiles/ft_printf2.dir/print_octal.c.o.requires:
+
+.PHONY : CMakeFiles/ft_printf2.dir/print_octal.c.o.requires
+
+CMakeFiles/ft_printf2.dir/print_octal.c.o.provides: CMakeFiles/ft_printf2.dir/print_octal.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/print_octal.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf2.dir/print_octal.c.o.provides
+
+CMakeFiles/ft_printf2.dir/print_octal.c.o.provides.build: CMakeFiles/ft_printf2.dir/print_octal.c.o
+
+
 # Object files for target ft_printf2
 ft_printf2_OBJECTS = \
 "CMakeFiles/ft_printf2.dir/main.c.o" \
@@ -383,7 +503,12 @@ ft_printf2_OBJECTS = \
 "CMakeFiles/ft_printf2.dir/ft_is_num.c.o" \
 "CMakeFiles/ft_printf2.dir/ft_is_point.c.o" \
 "CMakeFiles/ft_printf2.dir/hexidecimal.c.o" \
-"CMakeFiles/ft_printf2.dir/other_chars.c.o"
+"CMakeFiles/ft_printf2.dir/other_chars.c.o" \
+"CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o" \
+"CMakeFiles/ft_printf2.dir/string.c.o" \
+"CMakeFiles/ft_printf2.dir/unicode_print.c.o" \
+"CMakeFiles/ft_printf2.dir/more_unicode.c.o" \
+"CMakeFiles/ft_printf2.dir/print_octal.c.o"
 
 # External object files for target ft_printf2
 ft_printf2_EXTERNAL_OBJECTS =
@@ -401,9 +526,14 @@ ft_printf2: CMakeFiles/ft_printf2.dir/ft_is_num.c.o
 ft_printf2: CMakeFiles/ft_printf2.dir/ft_is_point.c.o
 ft_printf2: CMakeFiles/ft_printf2.dir/hexidecimal.c.o
 ft_printf2: CMakeFiles/ft_printf2.dir/other_chars.c.o
+ft_printf2: CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o
+ft_printf2: CMakeFiles/ft_printf2.dir/string.c.o
+ft_printf2: CMakeFiles/ft_printf2.dir/unicode_print.c.o
+ft_printf2: CMakeFiles/ft_printf2.dir/more_unicode.c.o
+ft_printf2: CMakeFiles/ft_printf2.dir/print_octal.c.o
 ft_printf2: CMakeFiles/ft_printf2.dir/build.make
 ft_printf2: CMakeFiles/ft_printf2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable ft_printf2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking C executable ft_printf2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft_printf2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -424,6 +554,11 @@ CMakeFiles/ft_printf2.dir/requires: CMakeFiles/ft_printf2.dir/ft_is_num.c.o.requ
 CMakeFiles/ft_printf2.dir/requires: CMakeFiles/ft_printf2.dir/ft_is_point.c.o.requires
 CMakeFiles/ft_printf2.dir/requires: CMakeFiles/ft_printf2.dir/hexidecimal.c.o.requires
 CMakeFiles/ft_printf2.dir/requires: CMakeFiles/ft_printf2.dir/other_chars.c.o.requires
+CMakeFiles/ft_printf2.dir/requires: CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o.requires
+CMakeFiles/ft_printf2.dir/requires: CMakeFiles/ft_printf2.dir/string.c.o.requires
+CMakeFiles/ft_printf2.dir/requires: CMakeFiles/ft_printf2.dir/unicode_print.c.o.requires
+CMakeFiles/ft_printf2.dir/requires: CMakeFiles/ft_printf2.dir/more_unicode.c.o.requires
+CMakeFiles/ft_printf2.dir/requires: CMakeFiles/ft_printf2.dir/print_octal.c.o.requires
 
 .PHONY : CMakeFiles/ft_printf2.dir/requires
 

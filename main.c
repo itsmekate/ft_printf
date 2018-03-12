@@ -6,31 +6,28 @@
 /*   By: kprasol <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/03 18:36:43 by kprasol           #+#    #+#             */
-/*   Updated: 2018/02/15 17:25:00 by kprasol          ###   ########.fr       */
+/*   Updated: 2018/03/12 18:12:34 by kprasol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <limits.h>
 #include <locale.h>
-
+//
 //int	main(void)
 //{
-////setlocale(LC_ALL, "");
-//// char *l;
+//        setlocale(LC_ALL, "");
+//////// char *l;
+////////
+////////	l = "Hello";
+////    int i = ft_printf("%.3S\n", L"💩💩😂");
+////    int j = printf("%.3S\n", L"💩💩😂");
 ////
-////	l = "Hello";
-//    int i = ft_printf("{%03.2d}\n", 0);
-//    int j = printf("{%03.2d}\n", 0);
-//        printf("original {%+03d}\n", 0);
-//        ft_printf("{%+03d}\n", 0);
-//        printf("original {% 03d}\n", 0);
-//        ft_printf("{% 03d}\n", 0);
-//	printf("%d\n %d\n", i, j);
+//	ft_printf("%-5o", 2500);
 //	return (0);
 //}
 
-int ft_check1(const char *str, int count, va_list args, t_flag fl)
+int	ft_check1(const char *str, int count, va_list args, t_flag fl)
 {
 	if (*str == 'U')
 		count += ft_is_u_big(va_arg(args, uintmax_t), &fl);
@@ -51,7 +48,7 @@ int ft_check1(const char *str, int count, va_list args, t_flag fl)
 	return (count);
 }
 
-int ft_check2(const char *str, int count, va_list args,t_flag fl)
+int	ft_check2(const char *str, int count, va_list args, t_flag fl)
 {
 	if (*str == 's' && fl.l == 1)
 		count += ft_is_s_big(va_arg(args, wchar_t *), &fl);
@@ -64,43 +61,44 @@ int ft_check2(const char *str, int count, va_list args,t_flag fl)
 	else if (*str == 'd' || *str == 'i')
 		count += ft_is_d(va_arg(args, intmax_t), &fl);
 	else if (*str == '%')
-		count += ft_is_per(count, &fl);
+		count += ft_is_per(&fl);
 	else if (*str == 'o')
 		count += ft_is_o(va_arg(args, intmax_t), &fl);
 	else if (*str == 'O')
 		count += ft_is_o_big(va_arg(args, intmax_t), &fl);
 	else if (*str == 'u')
 		count += ft_is_u(va_arg(args, uintmax_t), &fl);
-	else if(!ft_strchr("cCsSdDioOuUxXp%", *str) && fl.minwidth != 0)
+	else if (!ft_strchr("cCsSdDioOuUxXp%", *str) && fl.minwidth != 0)
 		count += ft_other_chars(*str, count, fl);
-	else if(!ft_strchr("cCsSdDioOuUxXp%", *str))
+	else if (!ft_strchr("cCsSdDioOuUxXp%", *str))
 		count += write(1, &(*str), 1);
 	else
 		count = 0;
 	return (count);
 }
 
-int ft_read(va_list args, const char *str, int count)
+int	ft_read(va_list args, const char *str, int count)
 {
 	t_flag all_fl;
+
 	while (*str)
 	{
 		if (*str == '%')
 		{
 			str++;
 			all_fl = ft_write_flags(str);
-			str += all_fl.j + all_fl.h + all_fl. z + all_fl.l;
-			str += all_fl.hash + all_fl.plus + all_fl.minus + all_fl.space + all_fl.zero;
-			while ((*str >= '0' && *str <= '9') || *str == ' ' || *str == '+' || *str == '.')
+			str += all_fl.j + all_fl.h + all_fl.z + all_fl.l + all_fl.hash;
+			str += all_fl.plus + all_fl.minus + all_fl.space + all_fl.zero;
+			while ((*str >= '0' && *str <= '9')
+					|| *str == ' ' || *str == '+' || *str == '.')
 				str++;
-			count = ft_check1(str, count, args, all_fl) + ft_check2(str, count, args, all_fl);
+			count = ft_check1(str, count, args, all_fl)
+					+ ft_check2(str, count, args, all_fl);
 		}
 		else
-		{
-			ft_putchr(*str);
-			count++;
-		}
-		if ((count != 0 || all_fl.precision != 0 || all_fl.precision != -1) && ft_strcmp(str, "") != 0)
+			count += write(1, &(*str), 1);
+		if ((count != 0 || all_fl.precision != 0
+					|| all_fl.precision != -1) && ft_strcmp(str, "") != 0)
 			str++;
 	}
 	return (count);

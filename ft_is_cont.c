@@ -6,7 +6,7 @@
 /*   By: kprasol <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/15 17:57:56 by kprasol           #+#    #+#             */
-/*   Updated: 2018/02/15 18:09:03 by kprasol          ###   ########.fr       */
+/*   Updated: 2018/03/12 18:15:19 by kprasol          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_is_u(intmax_t i, t_flag *fl)
 {
-	int     count;
-	char    *res;
-	
+	int		count;
+	char	*res;
+
 	count = 0;
 	if (fl->h == 1)
 		i = (unsigned short)i;
@@ -41,11 +41,11 @@ int	ft_is_u(intmax_t i, t_flag *fl)
 	return (count);
 }
 
-int ft_is_u_big(intmax_t i, t_flag *fl)
+int	ft_is_u_big(intmax_t i, t_flag *fl)
 {
-	int     count;
-	char    *res;
-	
+	int		count;
+	char	*res;
+
 	count = 0;
 	if (fl->l == 1)
 		i = (unsigned long)i;
@@ -58,12 +58,10 @@ int ft_is_u_big(intmax_t i, t_flag *fl)
 	else
 		i = (unsigned long)i;
 	fl->plus = 0;
-	res = ft_itoa_base_S(i, 10);
+	res = ft_itoa_base_s_big(i, 10);
 	if (fl->minus == 1)
 		count += ft_print_min(fl, res, count, 0);
 	else
 		count += ft_print(fl, res, count, 0);
 	return (count);
 }
-
-

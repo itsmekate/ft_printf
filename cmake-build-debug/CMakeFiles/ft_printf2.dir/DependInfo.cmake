@@ -12,10 +12,15 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/kprasol/CLionProjects/ft_printf/ft_itoi_base.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/ft_itoi_base.c.o"
   "/Users/kprasol/CLionProjects/ft_printf/ft_put.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/ft_put.c.o"
   "/Users/kprasol/CLionProjects/ft_printf/hexidecimal.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/hexidecimal.c.o"
+  "/Users/kprasol/CLionProjects/ft_printf/hexidecimal_print.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o"
   "/Users/kprasol/CLionProjects/ft_printf/main.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/main.c.o"
+  "/Users/kprasol/CLionProjects/ft_printf/more_unicode.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/more_unicode.c.o"
   "/Users/kprasol/CLionProjects/ft_printf/octal.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/octal.c.o"
   "/Users/kprasol/CLionProjects/ft_printf/other_chars.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/other_chars.c.o"
+  "/Users/kprasol/CLionProjects/ft_printf/print_octal.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/print_octal.c.o"
+  "/Users/kprasol/CLionProjects/ft_printf/string.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/string.c.o"
   "/Users/kprasol/CLionProjects/ft_printf/unicode.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/unicode.c.o"
+  "/Users/kprasol/CLionProjects/ft_printf/unicode_print.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/unicode_print.c.o"
   "/Users/kprasol/CLionProjects/ft_printf/width.c" "/Users/kprasol/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf2.dir/width.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

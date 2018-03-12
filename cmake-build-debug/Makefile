@@ -339,6 +339,33 @@ hexidecimal.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/hexidecimal.c.s
 .PHONY : hexidecimal.c.s
 
+hexidecimal_print.o: hexidecimal_print.c.o
+
+.PHONY : hexidecimal_print.o
+
+# target to build an object file
+hexidecimal_print.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o
+.PHONY : hexidecimal_print.c.o
+
+hexidecimal_print.i: hexidecimal_print.c.i
+
+.PHONY : hexidecimal_print.i
+
+# target to preprocess a source file
+hexidecimal_print.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/hexidecimal_print.c.i
+.PHONY : hexidecimal_print.c.i
+
+hexidecimal_print.s: hexidecimal_print.c.s
+
+.PHONY : hexidecimal_print.s
+
+# target to generate assembly for a file
+hexidecimal_print.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/hexidecimal_print.c.s
+.PHONY : hexidecimal_print.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -365,6 +392,33 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/main.c.s
 .PHONY : main.c.s
+
+more_unicode.o: more_unicode.c.o
+
+.PHONY : more_unicode.o
+
+# target to build an object file
+more_unicode.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/more_unicode.c.o
+.PHONY : more_unicode.c.o
+
+more_unicode.i: more_unicode.c.i
+
+.PHONY : more_unicode.i
+
+# target to preprocess a source file
+more_unicode.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/more_unicode.c.i
+.PHONY : more_unicode.c.i
+
+more_unicode.s: more_unicode.c.s
+
+.PHONY : more_unicode.s
+
+# target to generate assembly for a file
+more_unicode.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/more_unicode.c.s
+.PHONY : more_unicode.c.s
 
 octal.o: octal.c.o
 
@@ -420,6 +474,60 @@ other_chars.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/other_chars.c.s
 .PHONY : other_chars.c.s
 
+print_octal.o: print_octal.c.o
+
+.PHONY : print_octal.o
+
+# target to build an object file
+print_octal.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/print_octal.c.o
+.PHONY : print_octal.c.o
+
+print_octal.i: print_octal.c.i
+
+.PHONY : print_octal.i
+
+# target to preprocess a source file
+print_octal.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/print_octal.c.i
+.PHONY : print_octal.c.i
+
+print_octal.s: print_octal.c.s
+
+.PHONY : print_octal.s
+
+# target to generate assembly for a file
+print_octal.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/print_octal.c.s
+.PHONY : print_octal.c.s
+
+string.o: string.c.o
+
+.PHONY : string.o
+
+# target to build an object file
+string.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/string.c.o
+.PHONY : string.c.o
+
+string.i: string.c.i
+
+.PHONY : string.i
+
+# target to preprocess a source file
+string.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/string.c.i
+.PHONY : string.c.i
+
+string.s: string.c.s
+
+.PHONY : string.s
+
+# target to generate assembly for a file
+string.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/string.c.s
+.PHONY : string.c.s
+
 unicode.o: unicode.c.o
 
 .PHONY : unicode.o
@@ -446,6 +554,33 @@ unicode.s: unicode.c.s
 unicode.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/unicode.c.s
 .PHONY : unicode.c.s
+
+unicode_print.o: unicode_print.c.o
+
+.PHONY : unicode_print.o
+
+# target to build an object file
+unicode_print.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/unicode_print.c.o
+.PHONY : unicode_print.c.o
+
+unicode_print.i: unicode_print.c.i
+
+.PHONY : unicode_print.i
+
+# target to preprocess a source file
+unicode_print.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/unicode_print.c.i
+.PHONY : unicode_print.c.i
+
+unicode_print.s: unicode_print.c.s
+
+.PHONY : unicode_print.s
+
+# target to generate assembly for a file
+unicode_print.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf2.dir/build.make CMakeFiles/ft_printf2.dir/unicode_print.c.s
+.PHONY : unicode_print.c.s
 
 width.o: width.c.o
 
@@ -507,18 +642,33 @@ help:
 	@echo "... hexidecimal.o"
 	@echo "... hexidecimal.i"
 	@echo "... hexidecimal.s"
+	@echo "... hexidecimal_print.o"
+	@echo "... hexidecimal_print.i"
+	@echo "... hexidecimal_print.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... more_unicode.o"
+	@echo "... more_unicode.i"
+	@echo "... more_unicode.s"
 	@echo "... octal.o"
 	@echo "... octal.i"
 	@echo "... octal.s"
 	@echo "... other_chars.o"
 	@echo "... other_chars.i"
 	@echo "... other_chars.s"
+	@echo "... print_octal.o"
+	@echo "... print_octal.i"
+	@echo "... print_octal.s"
+	@echo "... string.o"
+	@echo "... string.i"
+	@echo "... string.s"
 	@echo "... unicode.o"
 	@echo "... unicode.i"
 	@echo "... unicode.s"
+	@echo "... unicode_print.o"
+	@echo "... unicode_print.i"
+	@echo "... unicode_print.s"
 	@echo "... width.o"
 	@echo "... width.i"
 	@echo "... width.s"

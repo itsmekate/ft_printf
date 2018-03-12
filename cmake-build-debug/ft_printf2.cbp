@@ -107,7 +107,13 @@
 		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/hexidecimal.c">
 			<Option target="ft_printf2"/>
 		</Unit>
+		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/hexidecimal_print.c">
+			<Option target="ft_printf2"/>
+		</Unit>
 		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/main.c">
+			<Option target="ft_printf2"/>
+		</Unit>
+		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/more_unicode.c">
 			<Option target="ft_printf2"/>
 		</Unit>
 		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/octal.c">
@@ -116,7 +122,16 @@
 		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/other_chars.c">
 			<Option target="ft_printf2"/>
 		</Unit>
+		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/print_octal.c">
+			<Option target="ft_printf2"/>
+		</Unit>
+		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/string.c">
+			<Option target="ft_printf2"/>
+		</Unit>
 		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/unicode.c">
+			<Option target="ft_printf2"/>
+		</Unit>
+		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/unicode_print.c">
 			<Option target="ft_printf2"/>
 		</Unit>
 		<Unit filename="/Users/kprasol/CLionProjects/ft_printf/width.c">

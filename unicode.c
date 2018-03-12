@@ -12,6 +12,21 @@
 
 #include "ft_printf.h"
 
+int 	size(wchar_t i)
+{
+	int count;
+
+	if (i <= 0x7F)
+		count = 1;
+	else if (i <= 0x7FF)
+		count = 2;
+	else if (i <= 0xFFFF)
+		count = 3;
+	else
+		count = 4;
+	return (count);
+}
+
 int	ft_seven(int i, unsigned char res)
 {
 	res = i;
@@ -58,103 +73,5 @@ int	print_unicode(unsigned int i)
 		count += ft_sixteen(i);
 	else
 		count += ft_more(i);
-	return (count);
-}
-
-int	ft_unicodesize(wchar_t *i)
-{
-	int count;
-	int j;
-
-	count = 0;
-	j = 0;
-	while (i[j])
-	{
-		if (i[j] <= 0x7F)
-			count++;
-		else if (i[j] <= 0x7FF)
-			count += 2;
-		else if (i[j] <= 0xFFFF)
-			count += 3;
-		else
-			count += 4;
-		j++;
-	}
-	return (count);
-}
-
-int	ft_is_c_big(unsigned int i, t_flag *fl)
-{
-	int	count;
-
-	count = print_unicode(i);
-	return (count);
-}
-
-int	ft_is_s_big(wchar_t *i, t_flag *fl)
-{
-	if (i == NULL)
-	{
-		if (fl->precision != 0 && fl->precision != -1)
-		{
-			write(1, "(null)" , (size_t)fl->precision);
-			return (fl->precision);
-		}
-		else
-			write(1, "(null)" , 6);
-		return (6);
-	}
-	if (fl->minus != 1)
-		return (ft_printbigs(i, fl));
-	else
-		return (ft_printbigs_min(i, fl));
-
-}
-
-int ft_printbigs(wchar_t *i, t_flag *fl)
-{
-	int	count;
-	int j = 0;
-
-	count = 0;
-//	if (fl->space == 1 && fl->minwidth == 0 && fl->plus != 1 && (count++))
-//		write(1, " ", 1);
-	j = fl->minwidth - ft_unicodesize(i);
-	if (fl->minwidth != 0 && j > 0)
-	{
-		fl->zero == 1 ? ft_putzero(j) : ft_putspace(j);
-		ft_putuni(i, count);
-		return (fl->minwidth);
-	}
-	else
-		return (ft_putuni(i, count));
-}
-
-int ft_printbigs_min(wchar_t *i, t_flag *fl)
-{
-	int	count;
-	int j = 0;
-
-	count = 0;
-	if (fl->space == 1 && fl->minwidth == 0 && fl->plus != 1 && (count++))
-		write(1, " ", 1);
-	j = fl->minwidth - ft_unicodesize(i);
-	if (fl->minwidth != 0 && j > 0)
-	{
-		ft_putuni(i, count);
-		fl->zero == 1 ? ft_putzero(j) : ft_putspace(j);
-		return (fl->minwidth);
-	}
-	else
-		return (ft_putuni(i, count));
-}
-
-int ft_putuni(wchar_t *i, int count)
-{
-	while (*i)
-	{
-		count += print_unicode(*i);
-		i++;
-	}
 	return (count);
 }

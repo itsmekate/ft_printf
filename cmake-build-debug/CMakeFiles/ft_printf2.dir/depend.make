@@ -25,8 +25,14 @@ CMakeFiles/ft_printf2.dir/ft_put.c.o: ../ft_put.c
 CMakeFiles/ft_printf2.dir/hexidecimal.c.o: ../ft_printf.h
 CMakeFiles/ft_printf2.dir/hexidecimal.c.o: ../hexidecimal.c
 
+CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o: ../ft_printf.h
+CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o: ../hexidecimal_print.c
+
 CMakeFiles/ft_printf2.dir/main.c.o: ../ft_printf.h
 CMakeFiles/ft_printf2.dir/main.c.o: ../main.c
+
+CMakeFiles/ft_printf2.dir/more_unicode.c.o: ../ft_printf.h
+CMakeFiles/ft_printf2.dir/more_unicode.c.o: ../more_unicode.c
 
 CMakeFiles/ft_printf2.dir/octal.c.o: ../ft_printf.h
 CMakeFiles/ft_printf2.dir/octal.c.o: ../octal.c
@@ -34,8 +40,17 @@ CMakeFiles/ft_printf2.dir/octal.c.o: ../octal.c
 CMakeFiles/ft_printf2.dir/other_chars.c.o: ../ft_printf.h
 CMakeFiles/ft_printf2.dir/other_chars.c.o: ../other_chars.c
 
+CMakeFiles/ft_printf2.dir/print_octal.c.o: ../ft_printf.h
+CMakeFiles/ft_printf2.dir/print_octal.c.o: ../print_octal.c
+
+CMakeFiles/ft_printf2.dir/string.c.o: ../ft_printf.h
+CMakeFiles/ft_printf2.dir/string.c.o: ../string.c
+
 CMakeFiles/ft_printf2.dir/unicode.c.o: ../ft_printf.h
 CMakeFiles/ft_printf2.dir/unicode.c.o: ../unicode.c
+
+CMakeFiles/ft_printf2.dir/unicode_print.c.o: ../ft_printf.h
+CMakeFiles/ft_printf2.dir/unicode_print.c.o: ../unicode_print.c
 
 CMakeFiles/ft_printf2.dir/width.c.o: ../ft_printf.h
 CMakeFiles/ft_printf2.dir/width.c.o: ../width.c
