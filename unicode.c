@@ -12,21 +12,6 @@
 
 #include "ft_printf.h"
 
-int 	size(wchar_t i)
-{
-	int count;
-
-	if (i <= 0x7F)
-		count = 1;
-	else if (i <= 0x7FF)
-		count = 2;
-	else if (i <= 0xFFFF)
-		count = 3;
-	else
-		count = 4;
-	return (count);
-}
-
 int	ft_seven(int i, unsigned char res)
 {
 	res = i;

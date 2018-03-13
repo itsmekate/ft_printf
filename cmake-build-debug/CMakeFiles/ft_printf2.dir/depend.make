@@ -28,6 +28,9 @@ CMakeFiles/ft_printf2.dir/hexidecimal.c.o: ../hexidecimal.c
 CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o: ../ft_printf.h
 CMakeFiles/ft_printf2.dir/hexidecimal_print.c.o: ../hexidecimal_print.c
 
+CMakeFiles/ft_printf2.dir/hexidecimal_print_min.c.o: ../ft_printf.h
+CMakeFiles/ft_printf2.dir/hexidecimal_print_min.c.o: ../hexidecimal_print_min.c
+
 CMakeFiles/ft_printf2.dir/main.c.o: ../ft_printf.h
 CMakeFiles/ft_printf2.dir/main.c.o: ../main.c
 
@@ -39,6 +42,9 @@ CMakeFiles/ft_printf2.dir/octal.c.o: ../octal.c
 
 CMakeFiles/ft_printf2.dir/other_chars.c.o: ../ft_printf.h
 CMakeFiles/ft_printf2.dir/other_chars.c.o: ../other_chars.c
+
+CMakeFiles/ft_printf2.dir/print.c.o: ../ft_printf.h
+CMakeFiles/ft_printf2.dir/print.c.o: ../print.c
 
 CMakeFiles/ft_printf2.dir/print_octal.c.o: ../ft_printf.h
 CMakeFiles/ft_printf2.dir/print_octal.c.o: ../print_octal.c

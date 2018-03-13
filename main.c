@@ -13,17 +13,14 @@
 #include "ft_printf.h"
 #include <limits.h>
 #include <locale.h>
-//
+
 //int	main(void)
 //{
 //        setlocale(LC_ALL, "");
-//////// char *l;
-////////
-////////	l = "Hello";
-////    int i = ft_printf("%.3S\n", L"💩💩😂");
-////    int j = printf("%.3S\n", L"💩💩😂");
-////
-//	ft_printf("%-5o", 2500);
+//
+//    int i = ft_printf("%.4S\n", L"我是一只猫。");
+//    int j = printf("%.4S\n", L"我是一只猫。");
+//	printf("i %d j %d\n", i, j);
 //	return (0);
 //}
 

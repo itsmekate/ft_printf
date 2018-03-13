@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	print_str_no_prec(int tmp, char *str, t_flag *fl)
+int	print_str_no_prec(int tmp, char *str, t_flag *fl, int j)
 {
 	int count;
 
@@ -20,6 +20,13 @@ int	print_str_no_prec(int tmp, char *str, t_flag *fl)
 	tmp = fl->precision;
 	if (tmp != 0 && fl->precision != -1)
 	{
+		if (fl->precision < ft_strlen(str))
+		{
+			j = fl->minwidth - fl->precision;
+			j > 0 ? count += j :0;
+			while (j > 0)
+				j -= write(1, " ", 1);
+		}
 		while (tmp-- && *str)
 		{
 			count += write(1, &(*str), 1);
@@ -35,22 +42,16 @@ int	print_str_null(char *str, t_flag *fl, int j, int len)
 {
 	int tmp;
 
-	j = fl->minwidth;
+	j = fl->minwidth - len;
 	(fl->zero == 1) ? ft_putzero(j) : ft_putspace(j);
 	tmp = fl->precision;
 	if (tmp != 0 && tmp != -1)
 	{
 		j = len - tmp;
 		while (j > 0)
-		{
-			j--;
-			write(1, " ", 1);
-		}
-		while (tmp--)
-		{
-			write(1, "0", 1);
-			str++;
-		}
+			j -= write(1, " ", 1);
+		while (tmp-- && *str)
+			str += write(1, &(*str), 1);
 	}
 	return (fl->minwidth);
 }
@@ -71,7 +72,7 @@ int	check_str(char *str, t_flag *fl, int j, int len)
 	}
 	else if (fl->precision == 0)
 	{
-		ft_putspace(len);
+//		ft_putspace(len);
 		return (fl->minwidth);
 	}
 	else
@@ -118,11 +119,16 @@ int	ft_is_s(char *str, t_flag *fl)
 		return (print_str_null(str, fl, j, len));
 	else
 		len = ft_strlen(str);
-	j = fl->minwidth - len;
+	if ((fl->precision > len && fl->minwidth) || fl->precision)
+		j = fl->minwidth - len;
+	else if (fl->precision < len)
+		j = fl->minwidth - fl->precision;
+	else
+		j = fl->minwidth - len;
 	if (fl->minwidth != 0 && j > 0 && (!fl->minus))
 		return (check_str(str, fl, j, len));
 	else if (fl->minwidth != 0 && fl->minus)
 		return (check_str2(str, fl, j, len));
 	else
-		return (print_str_no_prec(tmp, str, fl));
+		return (print_str_no_prec(tmp, str, fl, j));
 }
