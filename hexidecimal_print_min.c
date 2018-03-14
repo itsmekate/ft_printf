@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	print_hex_min_width(t_flag *fl, char *res, int j)
+void	print_hex_min_width(t_flag *fl, char *res, int j)
 {
 	if (fl->precision > ft_strlen(res))
 	{
@@ -30,7 +30,7 @@ int	print_hex_min_width(t_flag *fl, char *res, int j)
 	}
 }
 
-int	ft_print_hexmin(t_flag *fl, char *res, int count)
+int		ft_print_hexmin(t_flag *fl, char *res, int count)
 {
 	int j;
 

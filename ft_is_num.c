@@ -17,8 +17,11 @@ int			check_count(intmax_t i, t_flag *fl, int count)
 	if (fl->space == 1 && fl->minwidth == 0
 		&& fl->plus != 1 && i > 0 && fl->minus != 1)
 		count += ((int)write(1, " ", 1));
-	if (i == 0 && fl->space == 1 && fl->minwidth != 0 && fl->zero == 1)
+	else if (i == 0 && fl->space == 1 && fl->minwidth != 0 && fl->zero == 1)
 		count -= write(1, " ", 1);
+	else if (i > 0 && fl->space == 1
+		&& fl->plus != 1 && i > 0 && fl->minus != 1)
+		count += write(1, " ", 1);
 	if (fl->plus == 1 && i >= 0)
 		count++;
 	return (count);

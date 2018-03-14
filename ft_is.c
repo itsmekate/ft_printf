@@ -60,7 +60,7 @@ int	ft_is_per(t_flag *fl)
 		if (fl->minwidth != 0 && j > 0)
 		{
 			ft_putchr('%');
-			(fl->zero == 1) ? ft_putzero(j) : ft_putspace(j);
+			(fl->zero == 1 && !fl->minus) ? ft_putzero(j) : ft_putspace(j);
 			return (fl->minwidth);
 		}
 		else

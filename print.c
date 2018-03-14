@@ -16,8 +16,6 @@ void		print_width(t_flag *fl, char *res, int minus, int j)
 {
 	if (fl->zero == 1 && fl->minus != 1)
 	{
-		if (ft_strcmp(res, "0") == 0 && fl->space == 1 && fl->zero == 1)
-			j--;
 		(fl->plus == 1 && !minus && !fl->minus) ? j -= write(1, "+", 1) : 0;
 		(minus == 1) ? j -= write(1, "-", 1) : 0;
 		ft_putzero(j);
@@ -83,13 +81,12 @@ int			ft_print(t_flag *fl, char *res, int count, int minus)
 {
 	int j;
 
-	j = 0;
 	if (ft_strcmp(res, "0") == 0 && fl->precision <= 0)
-		j = fl->minwidth;
+		j = fl->minwidth - fl->space;
 	else if (fl->precision > ft_strlen(res))
-		j = fl->minwidth - fl->precision;
+		j = fl->minwidth - fl->precision - fl->space;
 	else
-		j = fl->minwidth - ft_strlen(res);
+		j = fl->minwidth - ft_strlen(res) - fl->space;
 	if (fl->zero && fl->minwidth - fl->precision && fl->precision > 0)
 		fl->zero = 0;
 	if (fl->minwidth != 0 && j > 0)

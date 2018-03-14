@@ -32,11 +32,12 @@ typedef struct	s_type
 	int			space;
 	int			minwidth;
 	int			precision;
+	int			star;
 }				t_flag;
 
 void			ft_null_flag(t_flag *fl);
 int				ft_strlen(char *str);
-t_flag			ft_write_flags(const char *str);
+t_flag			ft_write_flags(const char *str, va_list args);
 int				ft_width(const char *str);
 void			ft_putchr(int c);
 void			ft_putnbr(ssize_t n);
@@ -77,6 +78,7 @@ int				ft_print_octal(t_flag *fl, char *res, int count);
 int				ft_print_octalmin(t_flag *fl, char *res, int count);
 int				ft_other_chars(char c, int count, t_flag fl);
 int				str_zero(t_flag *fl);
+int				ft_unicodesize(wchar_t *i);
 int				ft_printf(const char *str, ...);
 
 #endif

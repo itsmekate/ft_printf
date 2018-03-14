@@ -11,17 +11,13 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <limits.h>
-#include <locale.h>
 
-//int	main(void)
+//int main()
 //{
-//        setlocale(LC_ALL, "");
+//	ft_printf("{%*d}", -5, 42);
+//	printf("{%*d}", -5, 42);
 //
-//    int i = ft_printf("%.4S\n", L"我是一只猫。");
-//    int j = printf("%.4S\n", L"我是一只猫。");
-//	printf("i %d j %d\n", i, j);
-//	return (0);
+//	return (1);
 //}
 
 int	ft_check1(const char *str, int count, va_list args, t_flag fl)
@@ -65,9 +61,9 @@ int	ft_check2(const char *str, int count, va_list args, t_flag fl)
 		count += ft_is_o_big(va_arg(args, intmax_t), &fl);
 	else if (*str == 'u')
 		count += ft_is_u(va_arg(args, uintmax_t), &fl);
-	else if (!ft_strchr("cCsSdDioOuUxXp%", *str) && fl.minwidth != 0)
+	else if (!ft_strchr("cCsSdDioOuUxXp%hljz", *str) && fl.minwidth != 0)
 		count += ft_other_chars(*str, count, fl);
-	else if (!ft_strchr("cCsSdDioOuUxXp%", *str))
+	else if (!ft_strchr("cCsSdDioOuUxXp%hljz", *str))
 		count += write(1, &(*str), 1);
 	else
 		count = 0;
@@ -83,9 +79,11 @@ int	ft_read(va_list args, const char *str, int count)
 		if (*str == '%')
 		{
 			str++;
-			all_fl = ft_write_flags(str);
-			str += all_fl.j + all_fl.h + all_fl.z + all_fl.l + all_fl.hash;
-			str += all_fl.plus + all_fl.minus + all_fl.space + all_fl.zero;
+			if (!*str)
+				return (count);
+			all_fl = ft_write_flags(str, args);
+			str += all_fl.j + all_fl.h + all_fl.z + all_fl.l + all_fl.hash + all_fl.star;
+			str += all_fl.plus + all_fl.space + all_fl.zero + all_fl.minus;
 			while ((*str >= '0' && *str <= '9')
 					|| *str == ' ' || *str == '+' || *str == '.')
 				str++;
