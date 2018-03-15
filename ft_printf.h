@@ -33,6 +33,7 @@ typedef struct	s_type
 	int			minwidth;
 	int			precision;
 	int			star;
+	int 		starprecision;
 }				t_flag;
 
 void			ft_null_flag(t_flag *fl);

@@ -14,9 +14,17 @@
 
 //int main()
 //{
-//	ft_printf("{%*d}", -5, 42);
-//	printf("{%*d}", -5, 42);
+//	ft_printf("{%*3d}\n", 0, 0);
+////	ft_printf("%s\n", "abc");
+//	printf("{%*3d}\n", 5, 0);
 //
+////	ft_printf("@moulitest: %5.d %5.0d", 0, 0);
+////
+////	ft_printf("%4.s", "42");
+////	printf("%4.s", "42");
+////
+////	ft_printf("{%-.*d}\n", -5, 42);
+////	printf("{%-.*d}\n", -5, 42);
 //	return (1);
 //}
 
@@ -82,10 +90,20 @@ int	ft_read(va_list args, const char *str, int count)
 			if (!*str)
 				return (count);
 			all_fl = ft_write_flags(str, args);
-			str += all_fl.j + all_fl.h + all_fl.z + all_fl.l + all_fl.hash + all_fl.star;
-			str += all_fl.plus + all_fl.space + all_fl.zero + all_fl.minus;
+			str += all_fl.j + all_fl.h + all_fl.z + all_fl.l + all_fl.hash;
+			str += all_fl.plus + all_fl.space + all_fl.zero;
+			if (all_fl.starprecision == 2)
+				str += all_fl.starprecision;
+			if (all_fl.star == 2 && all_fl.minus)
+				str++;
+			else if (all_fl.star == 1 && all_fl.minus == 1)
+				str+= 2;
+			else if (all_fl.star)
+				str++;
+			else if (all_fl.minus)
+				str += all_fl.minus;
 			while ((*str >= '0' && *str <= '9')
-					|| *str == ' ' || *str == '+' || *str == '.')
+					|| *str == ' ' || *str == '+' || *str == '.' || *str == '*')
 				str++;
 			count = ft_check1(str, count, args, all_fl)
 					+ ft_check2(str, count, args, all_fl);

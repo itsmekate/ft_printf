@@ -106,6 +106,8 @@ int	ft_is_s(char *str, t_flag *fl)
 	int len;
 
 	len = 0;
+	if (fl->starprecision == 2 && fl->precision == 0)
+		return (0);
 	if ((str == NULL && fl->plus) ||
 		(str == NULL && fl->space) ||
 		(str == NULL && fl->precision == -1))

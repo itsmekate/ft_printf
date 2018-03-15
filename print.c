@@ -44,7 +44,7 @@ int			print_width_prec(t_flag *fl, char *res)
 		free(res);
 		return (fl->minwidth);
 	}
-	(fl->precision <= 0 && ft_strcmp(res, "0") == 0) ? 0 : ft_putstr(res);
+	(fl->precision == 0 && ft_strcmp(res, "0") == 0) ? 0 : ft_putstr(res);
 	free(res);
 	return (fl->minwidth);
 }
@@ -58,18 +58,13 @@ int			print_no_w(t_flag *fl, char *res, int count, int minus)
 		free(res);
 		return (count);
 	}
-	if (fl->precision > ft_strlen(res) && ft_strcmp(res, "0") != 0)
+	if (fl->precision > ft_strlen(res))
 	{
 		count += fl->precision - ft_strlen(res);
 		ft_putzero(fl->precision - ft_strlen(res));
 		count += ft_putstr(res);
 		free(res);
 		return (count);
-	}
-	if (fl->precision > ft_strlen(res) && ft_strcmp(res, "0") == 0)
-	{
-		free(res);
-		return (fl->minwidth);
 	}
 	else
 		count += ft_putstr(res);
@@ -81,7 +76,9 @@ int			ft_print(t_flag *fl, char *res, int count, int minus)
 {
 	int j;
 
-	if (ft_strcmp(res, "0") == 0 && fl->precision <= 0)
+	if (ft_strcmp(res, "0") == 0 && fl->precision < 0)
+		j = fl->minwidth - fl->space - ft_strlen(res);
+	else if (ft_strcmp(res, "0") == 0 && fl->precision == 0)
 		j = fl->minwidth - fl->space;
 	else if (fl->precision > ft_strlen(res))
 		j = fl->minwidth - fl->precision - fl->space;

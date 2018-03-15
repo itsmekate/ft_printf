@@ -27,6 +27,7 @@ void		ft_null_flag(t_flag *fl)
 	fl->minwidth = 0;
 	fl->precision = -1;
 	fl->star = 0;
+	fl->starprecision = 1;
 }
 
 int			ft_write_precision(const char *tmp, t_flag *fl)
@@ -43,13 +44,11 @@ const char	*ft_write_flags_more_more(t_flag *fl, const char *tmp, va_list args)
 		if (*tmp == '*')
 		{
 			fl->precision = va_arg(args, int);
-				if (fl->precision < 0)
-				{
-					fl->precision = -fl->precision;
-				}
-			fl->star++;
+			if (fl->precision < 0)
+				fl->precision = -1;
+			fl->starprecision++;
 		}
-		if (ft_strcmp(tmp, "-1") != 0)
+		else if (ft_strcmp(tmp, "-1") != 0)
 			tmp += ft_write_precision(tmp, fl);
 	}
 	return (tmp);
@@ -108,13 +107,27 @@ t_flag		ft_write_flags(const char *str, va_list args)
 	}
 	if (*tmp == '*')
 	{
-		fl.minwidth = va_arg(args, int);
-		if (fl.minwidth < 0)
+		tmp++;
+		if (*tmp >= '0' && *tmp <= '9')
 		{
-			fl.minwidth = -fl.minwidth;
-			fl.minus ? 0 : (fl.minus = 1);
+			va_arg(args, int);
+			fl.minwidth = ft_width(tmp);
+			tmp += ft_num_len(fl.minwidth);
 		}
-		fl.star++;
+		else
+		{
+			fl.minwidth = va_arg(args, int);
+			if (fl.minwidth < 0)
+			{
+				fl.minwidth = -fl.minwidth;
+				if (!fl.minus)
+				{
+					fl.minus = 1;
+					fl.star = 1;
+				}
+			}
+			fl.star++;
+		}
 	}
 	ft_write_more(&fl, tmp, args);
 	return (fl);
